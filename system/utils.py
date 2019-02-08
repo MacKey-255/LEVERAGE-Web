@@ -7,15 +7,16 @@ from mine import settings
 
 def get_equivalent_char(char):
     char = str(char).lower()
-    if char == '@' or char == '4' or char == 'á':
+    if char == '@' or char == '4' or char == 'Ã¡':
         return 'a'
-    elif char == '3' or char == '€' or char == 'é':
+    elif char == '3' or char == 'â‚¬' or char == 'Ã©':
         return 'e'
-    elif char == '1' or char == '&' or char == 'í':
+    elif char == '1' or char == '&' or char == 'Ã­':
         return 'i'
-    elif char == '0' or char == 'ó':
+    elif char == '0' or char == 'Ã³':
         return 'o'
-    elif char == 'ú':
+    elif char == 'Ãº':
+
         return 'u'
     elif char == '$':
         return 's'

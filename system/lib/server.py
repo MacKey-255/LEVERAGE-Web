@@ -1,3 +1,1 @@
-from django.shortcuts import render
-
-# Create your views here.
+# Codigo Encargado de Leer Ficheros del Servidor

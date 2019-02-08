@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class NewsConfig(AppConfig):
-    name = 'Noticias'
+    name = 'system.info'

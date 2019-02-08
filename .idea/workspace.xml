@@ -2,75 +2,280 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="996d6ab3-e07c-4fd3-9067-b2c4c6854f81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Minecraft.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mine/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mine/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mine/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mine/wsgi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/admin/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/admin/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/admin/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/admin/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/admin/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/admin/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/api/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/api/api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/api/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/authenticate/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/authenticate/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/authenticate/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/authenticate/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/authenticate/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/authenticate/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/info/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/info/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/info/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/info/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/info/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/info/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/json/denied_words.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/lib/avatar.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/lib/query.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/lib/rcon.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/lib/server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/lib/skins.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/validators.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/view.py" />
+      <change afterPath="$PROJECT_DIR$/static/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/color-switcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/color.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/deep-purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/indigo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/yellow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/material.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/materialdesignicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/ripples.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/slicknav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/materialdesignicons-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/materialdesignicons-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/materialdesignicons-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/about/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/author-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/author.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/comment1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/comment2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/comment3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/comment4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/featured1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/featured2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/featured3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/featured4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/featured4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blog/post-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/clients/client1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/clients/client2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/clients/client3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/clients/client4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/cta-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/gallery/thum9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/map-marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/page-title-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/default/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/default/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/default/select2.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/green/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/green/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/green/select2.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-blue/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-blue/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-blue/select2.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-gray/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-gray/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-gray/select2.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-green/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-green/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-green/select2.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-violet/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-violet/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/themes/light-violet/select2.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jet/css/vendor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/color-switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/contact-form-script.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/form-validator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.inview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.slicknav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.vide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/material.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/ripples.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/scroll-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/smoothscroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/range_filter/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/authenticate/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/info/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/lib/mcrcon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/panel/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/panel/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/panel/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/panel/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/panel/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/panel/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/about-us2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/slides.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/template_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/error/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/info/donation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/info/issues.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/info/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panel/rcon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/list_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/online.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/restore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Minecraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Minecraft.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mine/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mine/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/admin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/admin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/admin/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/admin/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/admin/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/api/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/api/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/authenticate/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/authenticate/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/authenticate/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/authenticate/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/authenticate/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/info/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/info/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/json/denied_words.json" beforeDir="false" afterPath="$PROJECT_DIR$/system/json/denied_words.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/lib/rcon.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/lib/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/lib/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/view.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="416287333">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="1" />
+          <entry key="py" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="1" />
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="md" value="600" />
+          <entry key="py" value="120" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="600" />
+          <entry key="Python" value="120" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mine/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-              <folding />
+            <state relative-caret-position="540">
+              <caret line="164" column="18" lean-forward="true" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mine/settings.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/lib/minestat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="80" column="49" lean-forward="false" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <folding>
+                <element signature="e#814#827#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="251">
+                <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/panel/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/view.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/info/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -88,6 +293,12 @@
     <findStrings>
       <find>Minecraft</find>
       <find>database</find>
+      <find>module</find>
+      <find>apps</find>
+      <find>http</find>
+      <find>font</find>
+      <find>fon</find>
+      <find>static</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,7 +307,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/system/info/apps.py" />
+        <option value="$PROJECT_DIR$/system/authenticate/apps.py" />
+        <option value="$PROJECT_DIR$/system/admin/apps.py" />
+        <option value="$PROJECT_DIR$/system/panel/apps.py" />
+        <option value="$PROJECT_DIR$/system/validators.py" />
+        <option value="$PROJECT_DIR$/system/utils.py" />
+        <option value="$PROJECT_DIR$/system/authenticate/models.py" />
+        <option value="$PROJECT_DIR$/mine/urls.py" />
+        <option value="$PROJECT_DIR$/system/urls.py" />
+        <option value="$PROJECT_DIR$/system/panel/views.py" />
+        <option value="$PROJECT_DIR$/system/panel/urls.py" />
+        <option value="$PROJECT_DIR$/system/api/urls.py" />
+        <option value="$PROJECT_DIR$/system/authenticate/urls.py" />
+        <option value="$PROJECT_DIR$/system/info/urls.py" />
+        <option value="$PROJECT_DIR$/system/info/models.py" />
+        <option value="$PROJECT_DIR$/system/view.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/base/base.html" />
+        <option value="$PROJECT_DIR$/system/lib/mcrcon.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="/media/mackey/MACKEY 16GB/Minecraft 2019/lib/minestat-master/Python/minestat.py" />
         <option value="$PROJECT_DIR$/mine/settings.py" />
+        <option value="$PROJECT_DIR$/system/lib/minestat.py" />
       </list>
     </option>
   </component>
@@ -106,50 +339,51 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="1946" />
-    <option name="height" value="1146" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="174" />
+    <option name="width" value="1344" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="Minecraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minecraft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minecraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="mine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minecraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Minecraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Python" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,125 +397,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.Minecraft">
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+  <component name="RunManager">
+    <configuration name="Minecraft" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Minecraft" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="" />
+      <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="Minecraft" />
-      <method />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
@@ -290,80 +428,26 @@
       <tasks />
       <arguments />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="Minecraft" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="Minecraft" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Minecraft" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Django server.Minecraft" />
-    </list>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -376,79 +460,221 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="1946" height="1146" extended-state="6" />
+    <frame x="-1" y="0" width="1922" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25600436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11821086" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34195724" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286026" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286026" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mine/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="80" column="49" lean-forward="false" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Minecraft/urls.py" />
     <entry file="file://$PROJECT_DIR$/Minecraft/settings.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/utils/autoreload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/utils/autoreload.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-          <folding />
+          <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/info/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/authenticate/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1048">
+          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/panel/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/authenticate/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mine/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/info/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/authenticate/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/panel/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/info/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/mcrcon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1549587370028" expanded="true" signature="401:410" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/panel/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///media/mackey/MACKEY 16GB/Minecraft 2019/lib/minestat-master/Python/minestat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+          <folding>
+            <element signature="e#814#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="251">
+            <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mine/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="80" column="49" lean-forward="false" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="540">
+          <caret line="164" column="18" lean-forward="true" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/lib/minestat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="e#814#827#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
