@@ -51,7 +51,7 @@ class Issues(models.Model):
 
 class Donations(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner', verbose_name='Donante')
-    tarjetNauta = models.CharField(max_length=30, null=False, default='', verbose_name='Tarjeta Nauta')
+    targetNauta = models.CharField(max_length=30, null=False, default='', verbose_name='Tarjeta Nauta')
     creationDate = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de la Donacion')
 
     class Meta:
@@ -59,7 +59,7 @@ class Donations(models.Model):
         verbose_name_plural = 'Donaciones'
 
     def __str__(self):
-        return '%s :: %s' % (self.owner.first_name, self.tarjetNauta)
+        return '%s :: %s' % (self.owner.first_name, self.targetNauta)
 
 
 class Statistic(models.Model):

@@ -1,0 +1,1 @@
+default_app_config = 'system.authenticate.apps.AuthConfig'

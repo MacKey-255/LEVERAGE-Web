@@ -1,7 +1,12 @@
 """System URL Configuration"""
+from django.conf.urls.static import static
 from django.urls import path, include
-from .view import home
+from django.conf import settings
+from .view import home, Mantenimiento, error_404, error_500
 
+
+handler404 = error_404
+handler500 = error_500
 
 urlpatterns = [
     path('', home, name='home'),
@@ -9,4 +14,6 @@ urlpatterns = [
     path('api/', include('system.api.urls')),
     path('user/', include('system.authenticate.urls')),
     path('info/', include('system.info.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) if not settings.MANTENIMIENTO_DEBUG else [
+    path('', Mantenimiento, name='home'),
 ]

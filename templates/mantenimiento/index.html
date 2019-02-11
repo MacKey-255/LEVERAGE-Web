@@ -1,0 +1,114 @@
+﻿{% load static from staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="{% static 'images/logo_gold.png' %}">
+<meta name="Copyright" content="Fici FIAI Todos los derechos reservados.">
+<meta name="robots" content="all">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{{ title }}</title>
+		<script type="text/javascript" src="{% static 'resources/js/jquery.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'resources/js/verticalcenter.js"' %}"></script>
+		<script type="text/javascript" src="{% static 'resources/js/functions.js' %}"></script>
+		<script type="text/javascript">
+            $(document).ready(function() {
+
+                /* EDIT BELOW */
+                var launchDate = new Date("{{ time }}");
+                var procentageDone = {{ porciento }};
+                var headerColor = 'yellow';
+                var progressFillColor = 'green';
+
+                /* DON'T EDIT BELOW */
+                var secondsRemaining = Math.floor(launchDate.getTime() / 1000) - Math.floor(new Date().getTime() / 1000);
+                countdown(secondsRemaining);
+                updateProgress(procentageDone);
+                setHeaderColor(headerColor);
+                setProgressFillColor(progressFillColor);
+
+            });
+        </script>
+		<link rel="stylesheet" href="{% static 'resources/css/main.css' %}" />
+	</head>
+	<body>
+		<!-- start: container -->
+		<div class="container">
+			<div class="header yellow"></div>
+			<!-- start: content -->
+			<div class="content">
+				<h1>Este sitio actualmente se encuentra en mantenimiento</h1>
+
+				<div class="space20"></div>
+				<h3>Terminaremos las Tareas de Mantenimiento en</h3>
+				<div class="space11"></div>
+				<!-- start: countdownTimerWrap -->
+				<div class="countdownTimerWrap clear">
+					<!-- start: countdownTimer -->
+					<div class="countdownTimer">
+						<div class="days">
+							<div class="number">00</div>
+							<div class="text">Días</div>
+						</div>
+						<div class="splitter">:</div>
+						<div class="hours">
+							<div class="number">00</div>
+							<div class="text">Horas</div>
+						</div>
+						<div class="splitter">:</div>
+						<div class="minutes">
+							<div class="number">00</div>
+							<div class="text">Minutos</div>
+						</div>
+						<div class="splitter">:</div>
+						<div class="seconds">
+							<div class="number">00</div>
+							<div class="text">Segundos</div>
+						</div>
+					</div>
+					<!-- end: countdownTimer -->
+				</div>
+				<!-- end: countdownTimerWrap -->
+				<div style="clear:both;"></div>
+				<div class="space28"></div>
+				<!-- start: progressBar -->
+				<div class="progressBar">
+					<!-- start: progressBarFill -->
+					<div class="progressBarFill green clear">
+						<div class="progressBarFillLeft"></div>
+						<div class="progressBarFillRight"></div>
+						<div class="progressBarFillMiddle">{{ porciento }}%</div>
+					</div>
+					<!-- end: progressBarFill -->
+				</div>
+				<!-- end: progressBar -->
+				<div class="space14"></div>
+				<!-- start: progressDescription -->
+				<div class="progressDescription">
+					<div class="progressDescriptionHeader"></div>
+					<div class="progressDescriptionMiddle">
+						<h1>El sitio se encuentra un {{ porciento }}% hecho</h1>
+						<p>Estamos en estos momentos actualizando nuestros sitios</p>
+					</div>
+					<div class="progressDescriptionFooter"></div>
+				</div>
+				<!-- end: progressDescription -->
+				<div class="space24"></div>
+			</div>
+			<!-- end: content -->
+			<div class="footer"></div>
+				<!-- start: notifyMe -->
+
+				<!-- end: notifyMe -->				
+			</div>
+			<!-- end: bottomBar -->
+            <center>
+                <div class="">
+                    <h2>Grupo de Desarrollo FIAI, 2018</h2>
+                    <h3>Todos los derechos reservados &copy;</h3>
+                </div>
+            </center>
+		</div>
+		<!-- end: container -->
+	</body>
+
+</html>

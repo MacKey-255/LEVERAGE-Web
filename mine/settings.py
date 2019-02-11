@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jet.dashboard', # always before django.contrib.admin
-    'jet',  # always before django.contrib.admin
+    'jet',           # always before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'ckeditor_uploader',
-    'system.info.apps.NewsConfig',
     'system.authenticate.apps.AuthConfig',
     'system.panel.apps.AdminConfig',
+    'system.info.apps.NewsConfig',
     'system.api',
 ]
 
@@ -121,6 +121,12 @@ AUTH_PASSWORD_VALIDATORS = [
 #          Web CONFIGURATION          #
 #######################################
 
+LANGUAGE_CODE = 'es'
+TIME_ZONE = 'America/Havana'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = False
+
 # Nombre de la Web
 PAGE_NAME = "Minecraft - LEVERAGE"
 
@@ -139,15 +145,15 @@ MANTENIMIENTO_PORCIENTO = '90'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+# Server Settings
+MC_HOST = '10.30.1.31'
+QUERY_PORT = 25545
+RCON_PORT = 25575
+RCON_PASSWORD = 'example'
+
 #######################################
 #        Web CONFIGURATION END        #
 #######################################
-
-LANGUAGE_CODE = 'es'
-TIME_ZONE = 'America/Havana'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -159,11 +165,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 SITE_ID = 1
-
-# Server Settings
-MC_HOST = '10.30.1.31'
-RCON_PORT = 25575
-RCON_PASSWORD = 'example'
 
 ####################################
 ##      CKEDITOR CONFIGURATION    ##
@@ -198,32 +199,22 @@ CKEDITOR_CONFIGS = {
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
             {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
             {'name': 'about', 'items': ['About']},
-            '/',  # put this to force next toolbar on new line
+            '/',
             {'name': 'yourcustomtools', 'items': [
-                # put the name of your editor.ui.addButton here
                 'Preview',
                 'Maximize',
 
             ]},
         ],
-        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
-        # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
-        # 'height': 291,
-        # 'width': '100%',
-        # 'filebrowserWindowHeight': 725,
-        # 'filebrowserWindowWidth': 940,
-        # 'toolbarCanCollapse': True,
-        # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+        'toolbar': 'YourCustomToolbarConfig',
         'tabSpaces': 4,
         'extraPlugins': ','.join([
-            'uploadimage', # the upload image feature
-            # your extra plugins here
+            'uploadimage',
             'div',
             'autolink',
             'autoembed',
             'embedsemantic',
             'autogrow',
-            # 'devtools',
             'widget',
             'lineutils',
             'clipboard',

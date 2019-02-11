@@ -1,5 +1,4 @@
 import re
-
 from django.core.exceptions import ValidationError
 from system.utils import validate_text
 
