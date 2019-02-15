@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Material - Material Design Bootstrap 4 Template</title>
+    <title>Minecraft - LEVERAGE</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -33,10 +33,15 @@
 
     <!-- Color CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/colors/indigo.css' %}" media="screen" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
 
   </head>
   <body>
+    {% block nav %}{% endblock %}
+    {% block slides %}{% endblock %}
     {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+
 
 
     <!-- Back To Top -->

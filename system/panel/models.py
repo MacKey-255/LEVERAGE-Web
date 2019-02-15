@@ -46,6 +46,7 @@ class ResourcePack(models.Model):
 class AntiCheat(models.Model):
     version = models.CharField(max_length=20, default="1.0.0", verbose_name="Version del AntiParches")
     show_anticheat = models.BooleanField(null=False, default=False, verbose_name='Mostrar en el AntiParche')
+    launcher = models.FileField(null=False, verbose_name='Launcher LEVERAGE')
 
     class Meta:
         verbose_name = "AntiParche"

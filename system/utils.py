@@ -1,6 +1,9 @@
 import json
 import os
+import random
 import re
+import uuid
+
 from mine import settings
 
 
@@ -39,3 +42,15 @@ def validate_text(text):
         if word in words:
             found.append(word)
     return found
+
+
+class NULL_NAMESPACE:
+    bytes = b''
+
+
+def getUsernameToUUID(username):
+    return str(uuid.uuid3(NULL_NAMESPACE, "OfflinePlayer:" + username))
+
+
+def generateRandomString():
+    return 'arc'

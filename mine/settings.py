@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'system.context_processors.dataStatic',
             ],
         },
     },
@@ -136,6 +137,9 @@ CACHE_GLOBAL_SECONDS = 60 * 60 * 12    # 12 horas
 # Numero de Paginas a Paginar de Noticias
 MAX_PAGINATOR = 5
 
+# Notificacion en el AntiParches
+ANTICHEAT_NOTIFICATION = 'Puede activar la cuenta Premium donando Tarjeta Nauta!'
+
 # Mode mantenimiento
 MANTENIMIENTO_DEBUG = False
 MANTENIMIENTO_DATE = 'June 10, 2019 23:00:00'
@@ -146,10 +150,11 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Server Settings
-MC_HOST = '10.30.1.31'
-QUERY_PORT = 25545
-RCON_PORT = 25575
-RCON_PASSWORD = 'example'
+MC_HOST = '127.0.0.1'
+MC_PORT = 25565
+RCON_PORT = 25595
+RCON_PASSWORD = 'minecraft122'
+SERVER_DIRS = '/home/mackey/MacKey/Server/Minecraft/Server Minecraft LEVERAGE v3.2/'
 
 #######################################
 #        Web CONFIGURATION END        #

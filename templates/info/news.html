@@ -1,0 +1,38 @@
+{% extends 'base/template.html' %}
+{% load static %}
+{% block content %}
+    <!-- Our BLog Section -->
+    <section class="Material-blog-section section-padding section-dark">
+      <div class="container">
+        <div class="row">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title text-center">Noticias:</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for obj in object_list %}
+            <!-- Single Article -->
+            <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
+                <article class="single-blog-post">
+                    <!-- Featured Image -->
+                    <div class="featured-image">
+                        <a href="#">
+                            <img src="{{ obj.image.url }}" alt="">
+                        </a>
+                    </div>
+                    <!-- Post Meta -->
+                    <div class="post-meta">
+                        <!-- Title -->
+                        <a href="#"><h2 class="subtitle">{{ obj.title }}</h2></a>
+                         <p>{{ obj.description }}</p>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Our BLog Section End -->
+{% endblock %}

@@ -8,10 +8,11 @@ class Profile(models.Model):
     owner = models.OneToOneField(User, unique=True, on_delete=models.CASCADE, verbose_name='Usuario')
     role = models.ForeignKey(Group, on_delete=models.CASCADE, null=True, verbose_name="Role")
     date = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de Creacion')
-    group = models.OneToOneField('Team', related_name="user_group", on_delete=models.CASCADE, blank=True, verbose_name="Grupo Subscrito")
+    group = models.OneToOneField('Team', related_name="user_group", on_delete=models.CASCADE, null=True, blank=True, verbose_name="Grupo Subscrito")
     timeActivity = models.DateTimeField(auto_now=True, verbose_name="Ultima Actividad")
     ip = models.GenericIPAddressField(null=False, verbose_name="IP")
-    premium = models.DateField(null=True, default=None, verbose_name="Fecha Pago de AntiPublicidad")
+    uuid = models.CharField(max_length=50, null=False, verbose_name="UUID")
+    premium = models.DateField(null=True, blank=True, default=None, verbose_name="Fecha Pago de AntiPublicidad")
     online = models.BooleanField(default=False, verbose_name="Conectado")
 
     class Meta:
@@ -43,7 +44,7 @@ class Ban(models.Model):
     expulse = ((0, 'Permanente'), (60, '1 minuto'), (120, '2 minutos'))
 
     op = models.CharField(max_length=40, verbose_name="Operador")
-    user_ban = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_ban",
+    user_ban = models.OneToOneField(User, unique=True, on_delete=models.CASCADE, related_name="user_ban",
                                  verbose_name="Usuario Baneado")
     motive = models.CharField(max_length=240, verbose_name="Motivo")
     ban_date = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Baneo")

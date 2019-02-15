@@ -2,11 +2,8 @@
 from django.conf.urls.static import static
 from django.urls import path, include
 from django.conf import settings
-from .view import home, Mantenimiento, error_404, error_500
+from .view import home, Mantenimiento
 
-
-handler404 = error_404
-handler500 = error_500
 
 urlpatterns = [
     path('', home, name='home'),

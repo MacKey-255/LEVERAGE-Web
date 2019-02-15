@@ -1,3 +1,4 @@
+{% load static %}
     <!-- Header Start -->
     <header id="header">
       <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar nav-bg">
@@ -10,203 +11,105 @@
               <span class="mdi mdi-menu"></span>
               <span class="mdi mdi-menu"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" alt=""></a>
+            <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo_nuevo.png' %}" alt=""></a>
           </div>
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                  Home
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                  Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'news' %}">
+                  Noticias
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'webStatic' 'staff' %}">
+                  Staff
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'bans_list' %}">
+                  Baneados
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Pages
+                  Informacion
                 </a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="about-us.html">About Us 1</a>
-                  <a class="dropdown-item" href="about-us2.html">About Us 2</a>
-                  <a class="dropdown-item" href="team.html">Team Members</a>
-                  <a class="dropdown-item" href="services.html">Services</a>
-                  <a class="dropdown-item" href="contact-us.html">Contact Us 1</a>
-                  <a class="dropdown-item" href="contact-us2.html">Contact Us 2</a>
-                  <a class="dropdown-item" href="404.html">404</a>
+                  <a class="dropdown-item" href="{% url 'home' %}">¿Como descargar LEVERAGE?</a>
+                  <a class="dropdown-item" href="{% url 'home' %}">¿Como entrar al Servidor?</a>
+                  <a class="dropdown-item" href="{% url 'home' %}">¿Que mods posee el Servidor?</a>
+                  <a class="dropdown-item" href="{% url 'home' %}">¿Como sobrevivir tu primer dia?</a>
+                  <a class="dropdown-item" href="{% url 'home' %}">¿Como asegurar tu casa?</a>
+                  <a class="dropdown-item" href="{% url 'home' %}">¿Como asaltar una casa?</a>
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Components
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                  Reportes
                 </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="tab.html">Tabs</a>
-                  <a class="dropdown-item" href="alert.html">Alert</a>
-                  <a class="dropdown-item" href="accordion.html">Accordions</a>
-                  <a class="dropdown-item" href="pricing.html">Pricing Tables</a>
-                  <a class="dropdown-item" href="buttons.html">Buttons</a>
-                  <a class="dropdown-item" href="icons.html">Icons</a>
-                  <a class="dropdown-item" href="carousel.html">Carousel</a>
-                  <a class="dropdown-item" href="counter.html">Counter</a>
-                  <a class="dropdown-item" href="map.html">Google Map</a>
-                </div>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Portfolio
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                  Donaciones
                 </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="portfolio-2.html">Portfolio 2 columns</a>
-                  <a class="dropdown-item" href="portfolio.html">Portfolio 3 columns</a>
-                  <a class="dropdown-item" href="portfolio-single.html">Portfolio Single</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Blog
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="blog.html">Blog Page</a>
-                  <a class="dropdown-item" href="blog-single.html">Blog Single Page</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Contact Us
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="contact-us.html">Contact Us 1</a>
-                  <a class="dropdown-item" href="contact-us2.html">Contact Us 2</a>
-                </div>
               </li>
             </ul>
             <!-- Search Box Start -->
             <div class="search-icon">
               <span class="open-search">
-                <i class="mdi mdi-magnify btn btn-common"></i>
+                  <a href="{% url 'home' %}"><i class="mdi mdi-account btn btn-common"></i></a>
               </span>
             </div>
-            <form role="search" class="navbar-form">
-              <div class="container">
-                <div class="row">
-                  <div class="form-group has-feedback">
-                    <input type="text" placeholder="Type and search ..." class="form-control">
-                    <div class="close"><i class="mdi mdi-close"></i></div>
-                  </div>
-                </div>
-              </div>
-            </form>
             <!-- Search Box End -->
           </div>
         </div>
         <!-- Mobile Menu Start -->
         <ul class="wpb-mobile-menu">
           <li>
-            <a class="active" href="index.html">
-            Home
-            </a>
+            <a href="{% url 'home' %}">Inicio</a>
           </li>
           <li>
-            <a href="#">
-            Pages
-            </a>
+            <a href="{% url 'home' %}">Noticias</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}">Staff</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}">Baneados</a>
+          </li>
+          <li>
+            <a href="#">Informacion</a>
             <ul class="dropdown">
               <li>
-                <a href="about-us.html">About Us 1</a>
+                <a href="{% url 'home' %}">¿Como descargar LEVERAGE?</a>
               </li>
               <li>
-                <a href="about-us2.html">About Us 2</a>
+                <a href="{% url 'home' %}">¿Como entrar al Servidor?</a>
               </li>
               <li>
-                <a href="team.html">Team Members</a>
+                <a href="{% url 'home' %}">¿Que mods posee el Servidor?</a>
               </li>
               <li>
-                <a href="services.html">Services</a>
+                <a href="{% url 'home' %}">¿Como sobrevivir tu primer dia?</a>
               </li>
               <li>
-                  <a href="contact-us.html">Contact Us 1</a>
+                  <a href="{% url 'home' %}">¿Como asegurar tu casa?</a>
               </li>
               <li>
-                  <a href="contact-us2.html">Contact Us 2</a>
-              </li>
-              <li>
-                  <a href="404.html">404</a>
+                  <a href="{% url 'home' %}">¿Como asaltar una casa?</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">
-            Elements
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="tab.html">Tabs</a>
-              </li>
-              <li>
-                <a href="alert.html">Alert</a>
-              </li>
-              <li>
-                <a href="accordion.html">Accordions</a>
-              </li>
-              <li>
-               <a href="pricing.html">Pricing Tables</a>
-              </li>
-              <li>
-                  <a href="buttons.html">Buttons</a>
-              </li>
-              <li>
-                  <a href="icons.html">Icons</a>
-              </li>
-              <li>
-                  <a href="carousel.html">Carousel</a>
-              </li>
-              <li>
-                  <a href="counter.html">Counter</a>
-              </li>
-              <li>
-                 <a href="map.html">Google Map</a>
-              </li>
-            </ul>
+            <a href="{% url 'home' %}">Reportes</a>
           </li>
           <li>
-            <a href="#">
-            Portfolio
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="portfolio-2.html">Portfolio 2 columns</a>
-              </li>
-              <li>
-                <a href="portfolio.html">Portfolio 3 columns</a>
-              </li>
-              <li>
-                <a href="portfolio-single.html">Portfolio Single</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="about.html">
-            Blog
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="blog.html">Blog Page</a>
-              </li>
-              <li>
-                <a href="blog-single.html">Blog Single Page</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-            Contact Us
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="contact-us.html">Contact Us 1</a>
-              </li>
-              <li>
-                <a href="contact-us2.html">Contact Us 2</a>
-              </li>
-            </ul>
+            <a href="{% url 'home' %}">Donaciones</a>
           </li>
         </ul>
         <!-- Mobile Menu End -->

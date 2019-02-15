@@ -3,7 +3,8 @@ from .models import Profile, Team, Ban
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('owner',)
+    list_display = ('owner', 'role', 'timeActivity', 'online', 'premium', 'group', 'ip')
+    list_editable = ['online']
 
 
 class TeamAdmin(admin.ModelAdmin):

@@ -8,7 +8,7 @@ from system.validators import validate
 class News(models.Model):
     title = models.CharField(max_length=120, null=False, default='', verbose_name='Título')
     description = models.CharField(max_length=200, null=False, default='', validators=[validate], verbose_name='Descripcion')
-    image = models.ImageField(null=False, verbose_name='Imagen Representativa')
+    image = models.ImageField(upload_to='news', null=False, verbose_name='Imagen Representativa')
     wroteBy = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_wroteBy', verbose_name='Escritor')
     creationDate = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de Creacion')
     show_anticheat = models.BooleanField(null=False, default=False, verbose_name='Mostrar en el AntiParche')
@@ -24,7 +24,7 @@ class News(models.Model):
 class TemplatesStatics(models.Model):
     title = models.CharField(max_length=240, null=False, default='', verbose_name='Título')
     content = RichTextUploadingField(null=False, default='', verbose_name='Contenido')
-    type = models.BooleanField(default='enlace', null=False, verbose_name='Nombre del enlace')
+    type = models.CharField(max_length=10, default='enlace', null=False, verbose_name='Nombre del enlace')
 
     class Meta:
         verbose_name = 'Plantilla Estática'
@@ -53,6 +53,7 @@ class Donations(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner', verbose_name='Donante')
     targetNauta = models.CharField(max_length=30, null=False, default='', verbose_name='Tarjeta Nauta')
     creationDate = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de la Donacion')
+    accepted = models.BooleanField(default=False, null=False, verbose_name='Donacion Aceptada')
 
     class Meta:
         verbose_name = 'Donacion'
