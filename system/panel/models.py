@@ -21,6 +21,7 @@ class Mods(models.Model):
     space = models.PositiveIntegerField(verbose_name="Tamaño en el Disco")
     modId = models.CharField(max_length=80, null=False, verbose_name="ID del Mod")
     version = models.CharField(max_length=80, null=False, verbose_name="Version del Mod")
+    nameJar = models.CharField(max_length=60, null=False, verbose_name="Nombre del Archivo")
     vmc = models.CharField(max_length=20, default="1.12.2", null=False, verbose_name="Version de Minecraft")
 
     class Meta:

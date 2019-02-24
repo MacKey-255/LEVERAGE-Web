@@ -6,7 +6,7 @@ from django.contrib.auth.models import Group
 # Create your models here.
 class Profile(models.Model):
     owner = models.OneToOneField(User, unique=True, on_delete=models.CASCADE, verbose_name='Usuario')
-    role = models.ForeignKey(Group, on_delete=models.CASCADE, null=True, verbose_name="Role")
+    role = models.ForeignKey(Group, on_delete=models.CASCADE, blank=True, null=True, verbose_name="Role")
     date = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de Creacion')
     group = models.OneToOneField('Team', related_name="user_group", on_delete=models.CASCADE, null=True, blank=True, verbose_name="Grupo Subscrito")
     timeActivity = models.DateTimeField(auto_now=True, verbose_name="Ultima Actividad")

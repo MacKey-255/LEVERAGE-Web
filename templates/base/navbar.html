@@ -11,7 +11,7 @@
               <span class="mdi mdi-menu"></span>
               <span class="mdi mdi-menu"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo_nuevo.png' %}" alt=""></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo_nuevo.png' %}" alt=""></a>
           </div>
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
@@ -20,6 +20,13 @@
                   Inicio
                 </a>
               </li>
+                {% if user.is_staff %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'panel_admin' %}">
+                  Panel Admin
+                </a>
+              </li>
+                {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'news' %}">
                   Noticias
@@ -49,12 +56,12 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">
+                <a class="nav-link" href="{% url 'issues' %}">
                   Reportes
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">
+                <a class="nav-link" href="{% url 'donations' %}">
                   Donaciones
                 </a>
               </li>
@@ -62,7 +69,11 @@
             <!-- Search Box Start -->
             <div class="search-icon">
               <span class="open-search">
-                  <a href="{% url 'home' %}"><i class="mdi mdi-account btn btn-common"></i></a>
+	            {% if user.is_authenticated %}
+                    <a href="{% url 'profile' user.id %}"><img src="{% static 'images/user.png' %}" class="img-account btn btn-common"></a>
+                {% else %}
+                  <a href="{% url 'login' %}"><i class="mdi mdi-account btn btn-common"></i></a>
+                {% endif %}
               </span>
             </div>
             <!-- Search Box End -->
@@ -73,14 +84,19 @@
           <li>
             <a href="{% url 'home' %}">Inicio</a>
           </li>
+            {% if user.is_staff %}
           <li>
-            <a href="{% url 'home' %}">Noticias</a>
+            <a href="{% url 'panel_admin' %}">Panel Admin</a>
+          </li>
+            {% endif %}
+          <li>
+            <a href="{% url 'news' %}">Noticias</a>
           </li>
           <li>
-            <a href="{% url 'home' %}">Staff</a>
+            <a href="{% url 'webStatic' 'staff' %}">Staff</a>
           </li>
           <li>
-            <a href="{% url 'home' %}">Baneados</a>
+            <a href="{% url 'bans_list' %}">Baneados</a>
           </li>
           <li>
             <a href="#">Informacion</a>
@@ -106,10 +122,10 @@
             </ul>
           </li>
           <li>
-            <a href="{% url 'home' %}">Reportes</a>
+            <a href="{% url 'issues' %}">Reportes</a>
           </li>
           <li>
-            <a href="{% url 'home' %}">Donaciones</a>
+            <a href="{% url 'donations' %}">Donaciones</a>
           </li>
         </ul>
         <!-- Mobile Menu End -->

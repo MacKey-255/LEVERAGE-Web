@@ -1,0 +1,31 @@
+{% for member in staff %}
+    <p>{{ member }}</p>
+{% endfor %}
+<br />
+{% for log in logs %}
+    <p>{{ log }}</p>
+{% endfor %}
+
+<h2>Version:</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form_version.as_p }}
+    <button type="submit">Send</button>
+  </form>
+
+<h2>Mods:</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form_mods.as_p }}
+    <button type="submit">Send</button>
+  </form>
+
+<h2>ResourccesPack:</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form_resources.as_p }}
+    <button type="submit">Send</button>
+  </form>

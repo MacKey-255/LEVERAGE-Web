@@ -1,0 +1,11 @@
+{% if online %}
+    {% if players %}
+        {% for obj in players %}
+            <p>obj</p>
+        {% endfor %}
+    {% else %}
+        No hay Jugadores Conectados.
+    {% endif %}
+{% else %}
+    No hay Servidor en este instante.
+{% endif %}

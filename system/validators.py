@@ -1,3 +1,4 @@
+import json
 import re
 from django.core.exceptions import ValidationError
 from system.utils import validate_text
@@ -44,3 +45,16 @@ def validate(value):
     words = validate_text(value)
     if words:
         raise ValidationError(u'Las siguientes palabras no están permitidas: ' + ', '.join(words) + '.')
+
+
+def file_size(value):
+    limit = 512 * 1024  # 0.5mb
+    if value.size > limit:
+        raise ValidationError('Archivo muy grande. Excede a 512KB')
+
+
+def json_validator(value):
+    try:
+        data = json.loads(value)
+    except Exception as e:
+        raise ValidationError('La informacion no es un JSON')

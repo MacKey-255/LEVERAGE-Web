@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% block nav %}{% include 'base/navbar.html' %}{% endblock %}
+{% block footer %}{% include 'base/footer.html' %}{% endblock %}
+{% load static %}
+{% block content %}
+    <br /><br /><br /><br />
+  <h2>Restore Password</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Recover</button>
+  </form>
+{% endblock %}

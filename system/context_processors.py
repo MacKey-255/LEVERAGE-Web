@@ -9,6 +9,5 @@ def dataStatic(request):
         "total_online": len(Profile.objects.filter(online=True)),
         "donwload_ftp": 'ftp://10.30.1.31/Cliente/Oficial/',
         "donwload_testing": 'ftp://10.30.1.31/Cliente/Testing/',
-        "donwload_torrent": 'ftp://10.30.1.31/Cliente/',
-        "news": News.objects.all().order_by('-id')[:3]
+        "donwload_torrent": 'ftp://10.30.1.31/Cliente/'
     }

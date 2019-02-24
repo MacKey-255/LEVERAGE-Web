@@ -1,4 +1,4 @@
-"""Faranduleando URL Configuration"""
+"""Minecraft URL Configuration"""
 from django.urls import path
 from .api import *
 
@@ -21,9 +21,10 @@ urlpatterns = [
     path('client/update/', update, name="api_update_client"),
     path('friends/', friends, name="api_search_friends"),
     #  Enlaces Funciones para la Web
-    #path('user/<username>', search.as_view(), name="api_search_user"),
-    #path('rcon/', rcon.as_view(), name="api_rcon"),
-    #path('server/logs/', rcon.as_view(), name="api_server_logs"),
-    #path('server/start/', server_start.as_view(), name="api_server_start"),
-    #path('server/stop/', server_stop.as_view(), name="api_server_stop"),
+    path('user/<username>', search_user, name="api_search_user"),
+    path('rcon/', rcon_send, name="api_rcon"),
+    #path('server/logs/', server_logs, name="api_server_logs"),
+    #path('server/start/', server_start, name="api_server_start"),
+    #path('server/stop/', server_stop, name="api_server_stop"),
+    #path('server/restart/', server_restart, name="api_server_restart"),
 ]

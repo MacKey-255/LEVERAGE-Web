@@ -1,8 +1,9 @@
 import json
 import os
-import random
 import re
 import uuid
+
+from django.core.files.storage import FileSystemStorage
 
 from mine import settings
 
@@ -54,3 +55,10 @@ def getUsernameToUUID(username):
 
 def generateRandomString():
     return 'arc'
+
+
+class OverwriteFile(FileSystemStorage):
+    def get_available_name(self, name, max_length=None):
+        if self.exists(name):
+            os.remove(os.path.join(settings.MEDIA_ROOT, name))
+        return name

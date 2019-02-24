@@ -200,7 +200,7 @@ def user_ban(request):
     # Ban Server User
     try:
         rcon = rconConnect()
-        rcon.command('ban '+user.owner.username+' Su AntiParches ha detectado un Parche')
+        rcon.command('ban ' + user.owner.username + ' Su AntiParches ha detectado un Parche')
     except Exception:
         return HttpResponse("ERROR CONEXION CON EL SERVIDOR", content_type="text/plain", status=200)
 
@@ -221,7 +221,8 @@ def user_crash(request):
     data = request.body
 
     # Escribir Archivo de Foto
-    destination = open(os.path.join(MEDIA_ROOT, 'crash/'+user.owner.username+'/'+generateRandomString()+'.log'), 'wb')
+    destination = open(os.path.join(MEDIA_ROOT, 'crash/' + user.owner.username + '/' + generateRandomString() + '.log'),
+                       'wb')
     destination.write(data)
     destination.close()
 
@@ -241,7 +242,7 @@ def user_skins(request):
     data = request.body
 
     # Escribir Archivo de Foto
-    destination = open(os.path.join(MEDIA_ROOT, 'skins/'+user.owner.username+'.png'), 'wb')
+    destination = open(os.path.join(MEDIA_ROOT, 'skins/' + user.owner.username + '.png'), 'wb')
     destination.write(data)
     destination.close()
 
@@ -260,7 +261,7 @@ def user_status(request, uuid):
     data = ""
     try:
         ban = Ban.objects.get(user_ban=user.owner)
-        data = "BAN:"+ban.motive
+        data = "BAN:" + ban.motive
     except Exception:
         # Sistema comprobador de Notificaciones
         you = Profile.objects.get(owner=request.user)
@@ -268,7 +269,7 @@ def user_status(request, uuid):
             today = date.today()
             result = today.month - (you.premium.month + 1) + (0 if today.day < you.premium.day else 1)
             if result > 0:
-                data = "NEWS:"+settings.ANTICHEAT_NOTIFICATION
+                data = "NEWS:" + settings.ANTICHEAT_NOTIFICATION
     return HttpResponse(data, content_type="text/plain", status=200)
 
 
@@ -293,7 +294,7 @@ def online(request):
 def update(request):
     at = AntiCheat.objects.get(show_anticheat=True)
     if at is not None:
-        data = {'version': at.version, 'url': 'http://'+request.META.get('HTTP_HOST')+at.launcher.url}
+        data = {'version': at.version, 'url': 'http://' + request.META.get('HTTP_HOST') + at.launcher.url}
     else:
         data = {'version': False}
     return JsonResponse(data, safe=False)
@@ -304,7 +305,9 @@ def news(request):
     news = News.objects.filter(show_anticheat=True)
 
     if len(news) > 0:
-        data = {'entries': [{'tags': ['novedad'], 'content': { 'en-us': {'action': 'view', 'title': obj.title, 'image': obj.image.url, 'text': obj.description}}} for obj in news]}
+        data = {'entries': [{'tags': ['novedad'], 'content': {
+            'en-us': {'action': 'view', 'title': obj.title, 'image': obj.image.url, 'text': obj.description}}} for obj
+                            in news]}
     else:
         data = {'entries': []}
     return JsonResponse(data, safe=False)
@@ -322,3 +325,23 @@ def friends(request):
     # Devolver lista de amigos
     data = {'friends': [{'username': obj.owner.username, 'online': obj.online, 'premium': obj.premium} for obj in user]}
     return JsonResponse(data, safe=False)
+
+
+# AJAX Servidor
+def search_user(request, username):
+    users = Profile.objects.filter(owner__username__contains=username)
+    return JsonResponse([{'user': user.owner.username} for user in users], safe=False)
+
+
+@csrf_exempt
+def rcon_send(request):
+    response = {'error':True, 'response': "Los datos deben ser enviados via POST"}
+    if request.method == 'POST':
+        if request.user.is_staff:
+            try:
+                rcon = rconConnect()
+                rcon.command(request.POST['command'])
+                response = {'error': False, 'response': "Comando enviado!"}
+            except Exception:
+                response = {'error': True, 'response': "Error de conexion con el Servidor"}
+    return JsonResponse(response, safe=False)

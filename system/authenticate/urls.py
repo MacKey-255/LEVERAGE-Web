@@ -1,20 +1,18 @@
-"""Faranduleando URL Configuration"""
-from django.urls import path, include
-from .views import *
+"""Minecraft URL Configuration"""
+from django.urls import path
+from django.contrib.auth.views import LoginView, LogoutView
+from .views import register, restore, profile, online, change_ip, skins
 
 
 urlpatterns = [
-	# Registro & Autenticacion
-    #path('auth/', auth.as_view(), name="auth"),
-    #path('register/', register.as_view(), name="register"),
-    #path('restore/', restore.as_view(), name="restore"),
-	# Modificacion, Baneo & Eliminacion de usuarios
-    #path('delete/<int:id>/', delete.as_view(), name="delete"),
-    #path('change/<int:id>/', change.as_view(), name="change"),
-    #path('skins/', skins.as_view(), name="skins"),
-    #path('ban/<int:id>/', ban.as_view(), name="ban"),
-    #path('pardon/<int:id>/', pardon.as_view(), name="pardon"),
-	# Ver Informacion & Online
-    #path('profile/<int:id>/', profile.as_view(), name="profile"),
-    #path('online/', online.as_view(), name="profile"),
+    # Registro & Autenticacion
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('register/', register, name="register"),
+    path('restore/', restore, name="restore"),
+    path('skins/', skins, name="upload_skins"),
+    path('change_ip/', change_ip, name="ip_config"),
+    # Ver Informacion & Online
+    path('profile/<int:id>/', profile, name="profile"),
+    path('online/', online, name="online"),
 ]

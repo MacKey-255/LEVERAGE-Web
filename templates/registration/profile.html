@@ -1,0 +1,7 @@
+{{ useraname }}
+
+  <form method="post" enctype="multipart/form-data" action="{% url 'upload_skins' %}">
+    {% csrf_token %}
+    {{ skins.as_p }}
+    <button type="submit">Send</button>
+  </form>

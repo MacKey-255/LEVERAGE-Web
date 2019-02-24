@@ -1,12 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.conf import settings
+
+from system.info.models import News
 
 
 def home(request):
-    if request.user.is_anonymous:
-        return redirect('login')
-
-    return render(request, "index.html")
+    return render(request, "index.html", {'news': News.objects.all().order_by('-id')[:3]})
 
 
 def Mantenimiento(request):
