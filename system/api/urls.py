@@ -15,9 +15,9 @@ urlpatterns = [
     path('ban/', user_ban, name="api_white"),
     path('skins/', user_skins, name="api_skins_upload"),
     path('online/', online, name="api_online"),
-    #path('check/version/', check_version.as_view(), name="api_check_version"),
-    #path('check/mods/', check_mods.as_view(), name="api_check_mods"),
-    #path('check/resources/', check_resources.as_view(), name="api_check_resources"),
+    path('check/version/', check_version, name="api_check_version"),
+    path('check/mods/', check_mods, name="api_check_mods"),
+    path('check/resources/', check_resources, name="api_check_resources"),
     path('client/update/', update, name="api_update_client"),
     path('friends/', friends, name="api_search_friends"),
     #  Enlaces Funciones para la Web

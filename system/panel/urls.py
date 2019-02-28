@@ -1,11 +1,11 @@
 """Minecraft URL Configuration"""
 from django.urls import path
-from .views import home
+from .views import home, change
 
 
 urlpatterns = [
     path('', home, name="panel_admin"),
-    #path('change/', data_change.as_view(), name="panel_change_data"),
+    path('change/', change, name="panel_change_data"),
     #path('rcon/', rcon.as_view(), name="panel_rcon"),
     # Modificacion, Baneo & Eliminacion de usuarios
     #path('delete/<int:id>/', delete.as_view(), name="delete"),

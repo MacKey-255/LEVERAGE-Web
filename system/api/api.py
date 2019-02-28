@@ -2,9 +2,10 @@ import json
 import os
 
 from mine.settings import MEDIA_ROOT
+from system.panel.models import ResourcePack, Mods, Version
 from system.lib.mcrcon import rconConnect
 from system.lib.server import addWhitelistFile, removeWhitelistFile
-from system.utils import getUsernameToUUID, generateRandomString
+from system.utils import getUsernameToUUID, generateRandomString, is_cheat
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse, HttpResponse
@@ -38,7 +39,11 @@ def logout_anticheat(request):
         user.save()
 
         # Add file whitelist
-        removeWhitelistFile(user.owner.username)
+        try:
+            removeWhitelistFile(user.owner.username)
+        except Exception:
+            return HttpResponse("ERROR CON EL SERVIDOR DE MINECRAFT", content_type="text/plain", status=200)
+
         # Reload Whitelist
         try:
             rcon = rconConnect()
@@ -171,13 +176,17 @@ def user_white(request):
         return HttpResponse("El Usuario con el ID: " + uuid + " no esta registrado!")
 
     # Add file whitelist
-    addWhitelistFile(user.owner.username)
+    try:
+        addWhitelistFile(user.owner.username)
+    except Exception:
+        return HttpResponse("ERROR CON EL SERVIDOR DE MINECRAFT", content_type="text/plain", status=200)
+
     # Reload Whitelist
     try:
         rcon = rconConnect()
         rcon.command('whitelist reload')
     except Exception:
-        return HttpResponse("ERROR CONEXION CON EL SERVIDOR", content_type="text/plain", status=200)
+        return HttpResponse("ERROR DE CONEXION CON EL SERVIDOR", content_type="text/plain", status=200)
 
     # Enviar Respuesta
     return HttpResponse("OK", content_type="text/plain", status=200)
@@ -325,6 +334,63 @@ def friends(request):
     # Devolver lista de amigos
     data = {'friends': [{'username': obj.owner.username, 'online': obj.online, 'premium': obj.premium} for obj in user]}
     return JsonResponse(data, safe=False)
+
+
+# JSON -> Version Actual AntiParche
+@csrf_exempt
+def check_version(request):
+    data = json.loads(str(request.body, encoding='utf-8'))
+
+    try:
+        version = Version.objects.get(versionId=data.get('id'))
+        if version.hash == data.get('fileHash'):
+            response = {'response': 'OK', 'error': False}
+        else:
+            response = {'response': 'Su version no concuerda con el Servidor!', 'error': True}
+    except Exception:
+        # Comprobar que no es algun parche
+        if is_cheat(data.get('id')):
+            return JsonResponse({'response': 'CHEAT', 'error': True}, safe=False)
+        response = {'response': 'Su version es Invalida!', 'error': True}
+    return JsonResponse(response, safe=False)
+
+
+# JSON -> Version Actual AntiParche
+@csrf_exempt
+def check_mods(request):
+    data = json.loads(str(request.body, encoding='utf-8'))
+    response = {'response': 'OK', 'error': False}
+    mods = Mods.objects.all()
+    for obj in mods:
+            for mod in data:
+                if obj.name == mod.get('id') and obj.hash == mod.get('filehash'):
+                    data.remove(mod)
+    if len(data) > 0:
+        # Comprobar que los mods sobrantes son algun parche
+        for obj in data:
+            if is_cheat(obj):
+                return JsonResponse({'response': 'CHEAT', 'error': True}, safe=False)
+        response = {'response': [{'mod': obj.get('id')} for obj in data], 'error': True}
+    return JsonResponse(response, safe=False)
+
+
+# JSON -> Chequea Version Minecraft (Antiparche)
+@csrf_exempt
+def check_resources(request):
+    data = json.loads(str(request.body, encoding='utf-8'))
+    response = {'response': 'OK', 'error': False}
+    resources = ResourcePack.objects.all()
+    for resource in resources:
+            for mod in data:
+                if resource.name == mod.get('id') and resource.hash == mod.get('filehash'):
+                    data.remove(mod)
+    if len(data) > 0:
+        # Comprobar que los paquetes de recursso sobrantes son algun parche
+        for obj in data:
+            if is_cheat(obj):
+                return JsonResponse({'response': 'CHEAT', 'error': True}, safe=False)
+        response = {'response': [{'resource': obj.get('id')} for obj in data], 'error': True}
+    return JsonResponse(response, safe=False)
 
 
 # AJAX Servidor

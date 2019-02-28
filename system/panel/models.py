@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Version(models.Model):
     vertionType = models.CharField(max_length=20, null=False, default="RELEASE", verbose_name="Tipo de Version")
-    space = models.PositiveIntegerField(verbose_name="Tamaño en el Disco")
+    hash = models.CharField(max_length=80, verbose_name="Hash")
     versionId = models.CharField(max_length=120, null=False, default="forge1.12.2-14.23.5.2768", verbose_name="Version de Forge")
     version = models.CharField(max_length=20, null=False, default="1.12.2", verbose_name="Version de Minecraft")
 
@@ -17,12 +17,8 @@ class Version(models.Model):
 
 
 class Mods(models.Model):
-    name = models.CharField(max_length=60, null=False, verbose_name="Nombre del Mod")
-    space = models.PositiveIntegerField(verbose_name="Tamaño en el Disco")
-    modId = models.CharField(max_length=80, null=False, verbose_name="ID del Mod")
-    version = models.CharField(max_length=80, null=False, verbose_name="Version del Mod")
-    nameJar = models.CharField(max_length=60, null=False, verbose_name="Nombre del Archivo")
-    vmc = models.CharField(max_length=20, default="1.12.2", null=False, verbose_name="Version de Minecraft")
+    name = models.CharField(max_length=120, verbose_name="Nombre del Archivo")
+    hash = models.CharField(max_length=80, verbose_name="Hash")
 
     class Meta:
         verbose_name = "Mod del Juego"
@@ -33,8 +29,8 @@ class Mods(models.Model):
 
 
 class ResourcePack(models.Model):
-    name = models.CharField(max_length=60, default="#FFF", verbose_name="Nombre del Archivo")
-    space = models.PositiveIntegerField(verbose_name="Tamaño en el Disco")
+    name = models.CharField(max_length=120, verbose_name="Nombre del Archivo")
+    hash = models.CharField(max_length=80, verbose_name="Hash")
 
     class Meta:
         verbose_name = "Paquete de Recurso"

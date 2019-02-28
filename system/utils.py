@@ -62,3 +62,12 @@ class OverwriteFile(FileSystemStorage):
         if self.exists(name):
             os.remove(os.path.join(settings.MEDIA_ROOT, name))
         return name
+
+
+def is_cheat(word):
+    word = str(word)
+    word_keys = ('xray', 'Xray', 'XRAY', 'Wurst', 'wurst', 'WURST')
+    for search in word_keys:
+        if word.find(search) != -1:
+            return True
+    return False

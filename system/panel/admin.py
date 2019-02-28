@@ -7,7 +7,7 @@ class VersionAdmin(admin.ModelAdmin):
 
 
 class ModsAdmin(admin.ModelAdmin):
-    list_display = ('name', 'version')
+    list_display = ('name',)
 
 
 class ResourcePackAdmin(admin.ModelAdmin):

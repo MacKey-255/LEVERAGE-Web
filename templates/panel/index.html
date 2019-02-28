@@ -8,7 +8,7 @@
 
 <h2>Version:</h2>
 
-  <form method="post">
+  <form method="post" action="{% url 'panel_change_data' %}">
     {% csrf_token %}
     {{ form_version.as_p }}
     <button type="submit">Send</button>
@@ -16,7 +16,7 @@
 
 <h2>Mods:</h2>
 
-  <form method="post">
+  <form method="post" action="{% url 'panel_change_data' %}">
     {% csrf_token %}
     {{ form_mods.as_p }}
     <button type="submit">Send</button>
@@ -24,7 +24,7 @@
 
 <h2>ResourccesPack:</h2>
 
-  <form method="post">
+  <form method="post" action="{% url 'panel_change_data' %}">
     {% csrf_token %}
     {{ form_resources.as_p }}
     <button type="submit">Send</button>
