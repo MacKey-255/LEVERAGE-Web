@@ -20,6 +20,7 @@ urlpatterns = [
     path('check/resources/', check_resources, name="api_check_resources"),
     path('client/update/', update, name="api_update_client"),
     path('friends/', friends, name="api_search_friends"),
+    path('crash/', user_crash, name="api_crash"),
     #  Enlaces Funciones para la Web
     path('user/<username>', search_user, name="api_search_user"),
     path('rcon/', rcon_send, name="api_rcon"),

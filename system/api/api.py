@@ -4,7 +4,7 @@ import os
 from mine.settings import MEDIA_ROOT
 from system.panel.models import ResourcePack, Mods, Version
 from system.lib.mcrcon import rconConnect
-from system.lib.server import addWhitelistFile, removeWhitelistFile
+from system.lib.server import addWhitelistFile, removeWhitelistFile, refreshWhitelistFile
 from system.utils import getUsernameToUUID, generateRandomString, is_cheat
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
@@ -41,6 +41,7 @@ def logout_anticheat(request):
         # Add file whitelist
         try:
             removeWhitelistFile(user.owner.username)
+            refreshWhitelistFile()
         except Exception:
             return HttpResponse("ERROR CON EL SERVIDOR DE MINECRAFT", content_type="text/plain", status=200)
 
@@ -154,6 +155,7 @@ def user_black(request):
 
     # Add file whitelist
     removeWhitelistFile(user.owner.username)
+    refreshWhitelistFile()
     # Reload Whitelist
     try:
         rcon = rconConnect()
@@ -396,7 +398,7 @@ def check_resources(request):
 # AJAX Servidor
 def search_user(request, username):
     users = Profile.objects.filter(owner__username__contains=username)
-    return JsonResponse([{'user': user.owner.username} for user in users], safe=False)
+    return JsonResponse([{'user': user.owner.username, 'online': user.online} for user in users], safe=False)
 
 
 @csrf_exempt

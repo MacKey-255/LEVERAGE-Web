@@ -1,8 +1,11 @@
 # Codigo Encargado de Leer Ficheros del Servidor
 import json
 import os
+
+from django.utils.timezone import now
 from mine.settings import SERVER_DIRS
-from system.utils import getUsernameToUUID
+from system.utils import getUsernameToUUID, datetimeToTimestamp, timestampToDatetime
+from system.authenticate.models import Profile
 
 
 def addWhitelistFile(username):
@@ -51,3 +54,14 @@ def removeWhitelistFile(username):
     return {'error': "Ya usted estaba en la Lista Blanca"}
 
 
+def refreshWhitelistFile():
+    # Sacamos la fecha de ayer
+    yesterday = now()
+    yesterday = datetimeToTimestamp(yesterday)
+    yesterday = yesterday - 3600*24  # a la hora le quitamos un dia (60*60*24)
+    yesterday = timestampToDatetime(yesterday)
+    # Buscamos por la fecha de ayer
+    users = Profile.objects.filter(timeActivity__lte=yesterday)
+    # Remover de la lista blanca a los usuarios encontrados
+    for user in users:
+        removeWhitelistFile(user.owner.username)

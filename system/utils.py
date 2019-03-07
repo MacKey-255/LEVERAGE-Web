@@ -2,7 +2,8 @@ import json
 import os
 import re
 import uuid
-
+import time
+from datetime import datetime
 from django.core.files.storage import FileSystemStorage
 
 from mine import settings
@@ -71,3 +72,11 @@ def is_cheat(word):
         if word.find(search) != -1:
             return True
     return False
+
+
+def timestampToDatetime(timestamp):
+    return datetime.fromtimestamp(timestamp)
+
+
+def datetimeToTimestamp(datetime):
+    return int(time.mktime(datetime.timetuple()))
