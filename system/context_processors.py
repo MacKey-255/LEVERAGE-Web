@@ -1,9 +1,10 @@
+from mine.settings import PAGE_NAME
 from system.authenticate.models import Profile, Team
-from system.info.models import News
 
 
 def dataStatic(request):
     return {
+        "title_page": PAGE_NAME,
         "total_players": Profile.objects.count(),
         "total_teams": Team.objects.count(),
         "total_online": len(Profile.objects.filter(online=True)),

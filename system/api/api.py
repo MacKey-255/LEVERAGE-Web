@@ -63,7 +63,7 @@ def logout_anticheat(request):
 def auth_anticheat(request):
     data = json.loads(str(request.body, encoding='utf-8'))
     try:
-        user = Profile.objects.get(owner__username=data.get('username'))
+        user = Profile.objects.get(owner__username=data.get('username'), uuid=getUsernameToUUID(data.get('username')))
     except Exception as e:
         return JsonResponse({'error': "El Usuario " + data.get('username') + " no esta registrado!"}, safe=False)
 
@@ -82,15 +82,15 @@ def auth_anticheat(request):
             data = {
                 'accessToken': data.get('accessToken'),
                 'selectedProfile': {
-                    'id': getUsernameToUUID(user.owner.username)
+                    'id': user.uuid
                 },
                 'user': {
-                    'id': getUsernameToUUID(user.owner.username)
+                    'id': user.uuid
                 },
                 'clientToken': str(user.id),
                 'availableProfiles': [
                     {
-                        'id': getUsernameToUUID(user.owner.username),
+                        'id': user.uuid,
                         'name': user.owner.username
                     }
                 ]
@@ -124,15 +124,15 @@ def refresh_anticheat(request):
         data = {
             'accessToken': data.get('accessToken'),
             'selectedProfile': {
-                'id': getUsernameToUUID(user.owner.username)
+                'id': user.uuid
             },
             'user': {
-                'id': getUsernameToUUID(user.owner.username)
+                'id': user.uuid
             },
             'clientToken': str(user.id),
             'availableProfiles': [
                 {
-                    'id': getUsernameToUUID(user.owner.username),
+                    'id': user.uuid,
                     'name': user.owner.username
                 }
             ]
@@ -266,7 +266,7 @@ def user_status(request, uuid):
     try:
         user = Profile.objects.get(uuid=uuid)
     except Exception:
-        return JsonResponse({'error': "El Usuario con el ID: " + uuid + " no esta registrado!"}, safe=False)
+        return JsonResponse({'error': 'El Usuario con el ID: ' + str(uuid) + ' no esta registrado!'}, safe=False)
 
     # Verificar si esta Baneado
     data = ""
@@ -303,11 +303,14 @@ def online(request):
 
 # JSON -> Version Actual AntiParche
 def update(request):
-    at = AntiCheat.objects.get(show_anticheat=True)
-    if at is not None:
-        data = {'version': at.version, 'url': 'http://' + request.META.get('HTTP_HOST') + at.launcher.url}
-    else:
-        data = {'version': False}
+    try:
+        at = AntiCheat.objects.get(show_anticheat=True)
+    except Exception:
+        # Crear una version por defecto ya que no existe una
+        at = AntiCheat(version='1.0.0', show_anticheat=True, launcher='/media/LEVERAGE-Launcher.jar')
+        at.save()
+    data = {'version': at.version, 'url': 'http://' + request.META.get('HTTP_HOST') + at.launcher.url}
+
     return JsonResponse(data, safe=False)
 
 

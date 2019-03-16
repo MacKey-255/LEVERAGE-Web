@@ -12,25 +12,34 @@
         </div>
 
         <div class="row">
-            {% for obj in object_list %}
-            <!-- Single Article -->
-            <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
-                <article class="single-blog-post">
-                    <!-- Featured Image -->
-                    <div class="featured-image">
-                        <a href="#">
-                            <img src="{{ obj.image.url }}" alt="">
-                        </a>
-                    </div>
-                    <!-- Post Meta -->
-                    <div class="post-meta">
-                        <!-- Title -->
-                        <a href="#"><h2 class="subtitle">{{ obj.title }}</h2></a>
-                         <p>{{ obj.description }}</p>
-                    </div>
-                </article>
+            {% if object_list %}
+                {% for obj in object_list %}
+                <!-- Single Article -->
+                <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
+                    <article class="single-blog-post">
+                        <!-- Featured Image -->
+                        <div class="featured-image">
+                            <a href="#">
+                                <img src="{{ obj.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <!-- Post Meta -->
+                        <div class="post-meta">
+                            <!-- Title -->
+                            <a href="#"><h2 class="subtitle">{{ obj.title }}</h2></a>
+                             <p>{{ obj.description }}</p>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+        {% else %}
+            <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".6s">
+              <!-- Button -->
+              <div class="col-md-12">
+                  <h6 class="text-center">No existen Noticias!</h6>
+              </div>
             </div>
-            {% endfor %}
+        {% endif %}
         </div>
       </div>
     </section>

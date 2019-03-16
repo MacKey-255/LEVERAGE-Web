@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
+from system.utils import getUsernameToUUID
 
 
 # Create your models here.
@@ -21,6 +22,10 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.owner.first_name
+
+    def setUuid(self):
+        self.uuid = getUsernameToUUID(self.owner.username)
+        return self.uuid
 
 
 class Team(models.Model):

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from system.lib.database import DATABASES_CONFIG
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,10 +86,7 @@ WSGI_APPLICATION = 'mine.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'minecraft.sqlite3'),
-    }
+    'default': DATABASES_CONFIG['mysql'],
 }
 
 # Caches
@@ -134,15 +132,12 @@ PAGE_NAME = "Minecraft - LEVERAGE"
 # Cache Web
 CACHE_GLOBAL_SECONDS = 60 * 60 * 12    # 12 horas
 
-# Numero de Paginas a Paginar de Noticias
-MAX_PAGINATOR = 5
-
 # Notificacion en el AntiParches
 ANTICHEAT_NOTIFICATION = 'Puede activar la cuenta Premium donando Tarjeta Nauta!'
 
 # Mode mantenimiento
 MANTENIMIENTO_DEBUG = False
-MANTENIMIENTO_DATE = 'June 10, 2019 23:00:00'
+MANTENIMIENTO_DATE = 'June 10, 2020 23:00:00'
 MANTENIMIENTO_PORCIENTO = '90'
 
 # Redirect Login & Logout

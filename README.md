@@ -55,3 +55,4 @@
     - pillow
     - django-ckeditor
     - django-jet
+    - pymysql

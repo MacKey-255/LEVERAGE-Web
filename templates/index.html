@@ -1,7 +1,6 @@
 {% extends 'base/template.html' %}
 {% load static %}
 {% block content %}
-
     <!-- Welcome Section Start -->
     <section class="welcome-section section-padding section-dark">
       <div class="container">
@@ -80,6 +79,7 @@
             </div>
         </div>
 
+        {% if news %}
         <div class="row">
             {% for obj in news %}
             <!-- Single Article -->
@@ -108,6 +108,14 @@
           </div>
         </div>
       </div>
+    {% else %}
+        <div class="row wow animated fadeInUp" data-wow-delay=".6s">
+          <!-- Button -->
+          <div class="col-md-12 text-center">
+              <h6 class="text-md-center">No existen Noticias!</h6>
+          </div>
+        </div>
+    {% endif %}
     </section>
     <!-- Our BLog Section End -->
 

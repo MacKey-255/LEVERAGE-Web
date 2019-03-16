@@ -150,7 +150,10 @@ class TCPSocketConnection(Connection):
         self.socket.send(data)
 
     def __del__(self):
-        self.socket.close()
+        try:
+            self.socket.close()
+        except Exception:
+            print('Servidor de Minecraft no esta montado!')
 
 
 class UDPSocketConnection(Connection):
