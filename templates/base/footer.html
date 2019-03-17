@@ -1,18 +1,31 @@
-{% load static %}
-    <!--Footer-->
-    <footer class="page-footer center-on-small-only  pt-0 footer-widget-container">
-
-      <!-- Copyright-->
-      <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; 2019 LEVERAGE, Todos los derechos reservados</p>
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area">
+    <!-- Copywrite Area -->
+    <div class="copywrite-content">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-sm-5">
+                    <!-- Copywrite Text -->
+                    <p class="copywrite-text">
+                        <a href="#">
+                            <script>document.write(new Date().getFullYear());</script> Minecraft LEVERAGE
+                        </a>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-7">
+                    <!-- Footer Nav -->
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Inicio</a></li>
+                            <li><a href="{% url 'news' %}">Noticias</a></li>
+                            <li><a href="{% url 'bans_list' %}">Baneados</a></li>
+                            <li><a href="{% url 'issues' %}">Reportar</a></li>
+                            <li><a href="{% url 'donations' %}">Donacion</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-          </div>
-      </div>
-      <!--/.Copyright -->
-
-    </footer>
-    <!--/.Footer-->
+        </div>
+    </div>
+</footer>
+<!-- ##### Footer Area End ##### -->

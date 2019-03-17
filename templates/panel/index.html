@@ -1,31 +1,129 @@
-{% for member in staff %}
-    <p>{{ member }}</p>
-{% endfor %}
-<br />
-{% for log in logs %}
-    <p>{{ log }}</p>
-{% endfor %}
+{% extends 'base/template.html' %}
+{% load static %}
+{% block content %}
 
-<h2>Version:</h2>
-
-  <form method="post" action="{% url 'panel_change_data' %}">
-    {% csrf_token %}
-    {{ form_version.as_p }}
-    <button type="submit">Send</button>
-  </form>
-
-<h2>Mods:</h2>
-
-  <form method="post" action="{% url 'panel_change_data' %}">
-    {% csrf_token %}
-    {{ form_mods.as_p }}
-    <button type="submit">Send</button>
-  </form>
-
-<h2>ResourccesPack:</h2>
-
-  <form method="post" action="{% url 'panel_change_data' %}">
-    {% csrf_token %}
-    {{ form_resources.as_p }}
-    <button type="submit">Send</button>
-  </form>
+    <!-- Welcome Section Start -->
+    <section class="welcome-section section-padding section-dark">
+      <div class="container">
+        <div class="row pt-5">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="text-center font-mc-ten mb-50">Panel Administrativo</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Miembros de la Administracion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for member in staff %}
+                        <tr>
+                            <td>{{ member.username }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <div class="row">
+                        <!-- Section Titile -->
+                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                            <h1 class="text-center font-mc-ten mb-2">Linea de Comandos:</h1>
+                        </div>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                         <form method="post" action="{% url 'panel_rcon' %}">
+                            <div class="row">
+                                <div class="col-12 mb-1">
+                                    <input name="cmd" class="form-control" id="cmd" type="text" placeholder="Comando ...">
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <div class="row">
+                        <!-- Section Titile -->
+                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                            <h1 class="text-center font-mc-ten mb-2">Version:</h1>
+                        </div>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                         <form method="post" action="{% url 'panel_change_data' %}">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="col-12 mb-1">
+                                    {{ form_version.json.errors }}
+                                    <input name="{{ form_version.json.html_name }}" class="form-control" id="{{ form_version.json.html_name }}" type="number" placeholder="{{ form_version.json.label }}">
+                                    {{ form_version.type }}
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Actualizar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <div class="row">
+                        <!-- Section Titile -->
+                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                            <h1 class="text-center font-mc-ten mb-2">Mods:</h1>
+                        </div>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                         <form method="post" action="{% url 'panel_change_data' %}">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="col-12 mb-1">
+                                    {{ form_mods.json.errors }}
+                                    <input name="{{ form_mods.json.html_name }}" class="form-control" id="{{ form_mods.json.html_name }}" type="number" placeholder="{{ form_mods.json.label }}">
+                                    {{ form_mods.type }}
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Actualizar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <div class="row">
+                        <!-- Section Titile -->
+                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                            <h1 class="text-center font-mc-ten mb-2">Paquete de Recursos:</h1>
+                        </div>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                         <form method="post" action="{% url 'panel_change_data' %}">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="col-12 mb-1">
+                                    {{ form_resources.json.errors }}
+                                    <input name="{{ form_resources.json.html_name }}" class="form-control" id="{{ form_resources.json.html_name }}" type="number" placeholder="{{ form_resources.json.label }}">
+                                    {{ form_resources.type }}
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Actualizar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </section>
+{% endblock %}

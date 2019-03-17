@@ -1,45 +1,50 @@
-{% extends 'base/base.html' %}
-{% block nav %}{% include 'base/navbar.html' %}{% endblock %}
-{% block footer %}{% include 'base/footer.html' %}{% endblock %}
+{% extends 'base/template.html' %}
 {% load static %}
 {% block content %}
-
-    <h2>Autenticación:</h2>
-    <br />
-    {% if form.errors %}
-    <p>Error de Autenticación, compruebe su Usuario y su contraseña.</p>
-    {% endif %}
-
-    {% if next %}
-        {% if user.is_authenticated %}
-        <p>Su cuenta no tiene acceso a esta página. Para proceder,
-        por favor inicie sesión con una cuenta que tenga acceso.</p>
-        {% else %}
-        <p>Por favor inicie sesión para ver esta página.</p>
-        {% endif %}
-    {% endif %}
-
-    <form method="post" class="form-group" action="{% url 'login' %}">
-        {% csrf_token %}
-        <br />
-        <div class="input-group">
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
-            </span>
-            <input class="form-control" maxlength="30" placeholder="Usuario" name="{{ form.username.html_name }}" type="text" />
+    <!-- ##### Articles Area Start ##### -->
+    <section class="articles-area">
+        <div class="container">
+            <div class="row pt-5">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="text-center font-mc-ten mb-15">Autenticación:</h1>
+                </div>
+            </div>
+            <nav class="row col-6 offset-3 justify-content-center">
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                        <form method="post" action="{% url 'login' %}">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                    </span>
+                                    <input class="form-control" maxlength="30" placeholder="Usuario" name="{{ form.username.html_name }}" type="text" />
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-lock"></span>
+                                    </span>
+                                    <input class="form-control" maxlength="30" placeholder="Contraseña" name="{{ form.password.html_name }}" type="password" />
+                                </div>
+                                <div class="input-group">
+                                    <p class="col-12 d-flex align-items-center justify-content-between">
+                                        <a href="{% url 'restore' %}">¿Has olvidado tu Contraseña?</a>
+                                        <a href="{% url 'register' %}">Registrarse</a>
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Autenticarse</button>
+                                </div>
+                                <input type="hidden" name="next" value="{{ next }}" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="input-group">
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-lock"></span>
-            </span>
-            <input class="form-control" maxlength="30" placeholder="Contraseña" name="{{ form.password.html_name }}" type="password" />
-        </div>
-        <br />
-        <div>
-          <input type="submit" class="btn col-md-offset-4 col-md-4 btn-primary" value="Autenticarse" />
-            <input type="hidden" name="next" value="{{ next }}" />
-        </div>
-    </form>
-    <a href="{% url 'register' %}"><button class="btn col-md-offset-4 col-md-4 btn-success">Registro</button></a>
-    <a href="{% url 'restore' %}"><button class="btn col-md-offset-4 col-md-4 btn-success">Restore</button></a>
+    </section>
+    <!-- ##### Articles Area End ##### -->
 {% endblock %}

@@ -1,204 +1,129 @@
-{% extends 'base/template.html' %}
+{% extends 'base/template_index.html' %}
 {% load static %}
 {% block content %}
     <!-- Welcome Section Start -->
-    <section class="welcome-section section-padding section-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-8 col-xs-12 welcome-column">
-            <div class="video-gallery">
+    <section class="welcome-section section-padding">
+        <div class="row p-0 h-100">
+            <div class="col-12 col-md-6 p-0">
                 <video controls width="100%" height="auto">
-                    <source src="{% static 'mine.mp4' %}" type="video/mp4"/>
+                    <source src="{% static 'video/mine.mp4' %}" type="video/mp4"/>
                     Tu navegador no soporta video HTML5
                 </video>
             </div>
-          </div>
-          <div class="col-md-12 col-lg-4 col-xs-12">
-            <div class="Material-tab">
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div class="tab-pane fade show active">
-                  <p>Minecraft es un sandbox, juego de construcción inspirado en Infiniminer, fortaleza enana y Dungeon Keeper, creado por Markus Persson, el fundador de Mojang AB. El juego consiste en jugadores de creación y destrucción de varios tipos de bloques en un entorno tridimensional. El jugador toma un avatar que puede destruir o crear bloques, formando estructuras fantásticas, las creaciones y obras de arte a través de los diversosmultijugador servidores en múltiples modos de juego.</p>
+            <div class="col-12 col-md-6">
+                <div class="col-md-8 offset-md-2 d-flex align-items-center justify-content-center">
+                    <div class="page-section mt-50">
+                        <div class="container">
+                            <div class="max-text-width d-block">
+                                <h2 style="text-align: center;" class="font-mc-seven">¿Qué es Minecraft?</h2>
+                                <p>Minecraft es un sandbox, juego de construcción inspirado en Infiniminer, fortaleza enana y Dungeon Keeper, creado por Markus Persson, el fundador de Mojang AB.</p>
+                                <p>El juego consiste en jugadores de creación y destrucción de varios tipos de bloques en un entorno tridimensional.</p>
+                                <p>El jugador toma un avatar que puede destruir o crear bloques, formando estructuras fantásticas, las creaciones y obras de arte a través de los diversos servidores en múltiples modos de juego.</p>
+                                <div class="justify-content-center text-center max-text-width">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <!-- Welcome Section End -->
 
-    <!-- About Section -->
-    <section class="Material-about-section section-padding">
-      <div class="container">
-        <div class="row">
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".2s">
-            <div class="about-single">
-                <img style="height: 70px" src="{% static 'images/personajes/player.png' %}">
-              <h2 class="subtitle">Supervivencia</h2>
-              <p>Para los amantes de la supervivencia extrema, esta es tu mejor opcion.</p>
-            </div>
-          </div>
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".3s">
-            <div class="about-single">
-                <img style="height: 70px" src="{% static 'images/personajes/cientifico.png' %}">
-              <h2 class="subtitle">Comercio</h2>
-              <p>El comercio entre jugadores permite el intercambio de multiples objetos.</p>
-            </div>
-          </div>
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".4s">
-            <div class="about-single">
-                <img style="height: 70px" src="{% static 'images/personajes/loco.png' %}">
-              <h2 class="subtitle">Tecnologia y Ciencia</h2>
-              <p>Maquinarias, artilugios y sistemas completos que mejoran tu experiencia en el juego.</p>
-            </div>
-          </div>
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".5s">
-            <div class="about-single">
-                <img style="height: 70px" src="{% static 'images/personajes/aldeano_fin.png' %}">
-              <h2 class="subtitle">Aventura y Misterio</h2>
-              <p>Magia, misterio y aventuras, te brindamos eso y mucho mas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Our BLog Section -->
-    <section class="Material-blog-section section-padding section-dark">
-      <div class="container">
-        <div class="row">
-            <!-- Section Titile -->
-            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                <h1 class="section-title text-center">Noticias:</h1>
-            </div>
-        </div>
-
-        {% if news %}
-        <div class="row">
-            {% for obj in news %}
-            <!-- Single Article -->
-            <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
-                <article class="single-blog-post">
-                    <!-- Featured Image -->
-                    <div class="featured-image">
-                        <a href="#">
-                            <img src="{{ obj.image.url }}" alt="">
-                        </a>
+    <section class="section-padding-0-100">
+        <div class="row p-0 h-100">
+            <div class="col-12 col-md-6">
+                <div class="col-md-8 offset-md-2 d-flex align-items-center justify-content-center">
+                    <div class="page-section page-section--double-spacing">
+                        <div class="container">
+                            <div class="max-text-width d-block">
+                                <h2 style="text-align: center;" class="font-mc-seven">CÓMO JUGAR</h2>
+                                <p>No existe una única forma de jugar Minecraft. ¡Es un mundo abierto los jugadores deciden lo que quieren hacer!</p>
+                                <p>Existen distintos modos de juego:&nbsp;<a href="#">Creativo</a>, donde los jugadores tienen materiales ilimitados para construir cualquier cosa que se les imagine; y&nbsp;<a href="#">Supervivencia</a>, donde los jugadores deben explorar el mundo y conseguir recursos para alimentarse, construir y defenderse.</p>
+                                <p>¡También puedes jugar con tus amigos en línea y hacer vuestras propias reglas!</p>
+                                <div class="justify-content-center text-center max-text-width">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Post Meta -->
-                    <div class="post-meta">
-                        <!-- Title -->
-                        <a href="blog-single.html"><h2 class="subtitle">{{ obj.title }}</h2></a>
-                         <p>{{ obj.description }}</p>
-                    </div>
-                </article>
+                </div>
             </div>
-            {% endfor %}
+            <div class="col-12 col-md-6 image-bg" style="background-image: url({% static 'images/more/how-to-play.jpg' %});"></div>
         </div>
-        <div class="row mt-5 wow animated fadeInUp" data-wow-delay=".6s">
-          <!-- Button -->
-          <div class="col-md-12 text-center">
-              <a href="{% url 'news' %}" class="animated4 btn btn-common" data-ripple-color="#000"><i class="material-icons mdi mdi-library"></i> Ver mas<div class="ripple-container"></div></a>
-          </div>
+        <div class="row p-0 h-100">
+            <div class="col-12 col-md-6 image-bg" style="background-image: url({% static 'images/more/get-started.jpg' %});"></div>
+            <div class="col-12 col-md-6">
+                <div class="col-md-8 offset-md-2 d-flex align-items-center justify-content-center">
+                    <div class="page-section page-section--double-spacing">
+                        <div class="container">
+                            <div class="max-text-width d-block">
+                                <h2 style="text-align: center;" class="font-mc-seven">HORA DE INICIO DEL EVENTO</h2>
+                                <p>Casi todos los bloques de Minecraft pueden ser obtenidos minando o recogiéndolos. ¡Después, puedes utilizarlos para construir otras cosas!</p>
+                                <p>Golpea un árbol hasta que consigas su tronco, transfórmalo en madera y combínala para crear una&nbsp;<a href="#">mesa de crafteo</a>.</p>
+                                <p>Puedes utilizar la mesa de crafteo para hacer todo tipo de herramientas, siempre que tengas los materiales necesarios.</p>
+                                <div class="justify-content-center text-center max-text-width">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    {% else %}
-        <div class="row wow animated fadeInUp" data-wow-delay=".6s">
-          <!-- Button -->
-          <div class="col-md-12 text-center">
-              <h6 class="text-md-center">No existen Noticias!</h6>
-          </div>
+        <div class="row p-0 h-100">
+            <div class="col-12 col-md-6">
+                <div class="col-md-8 offset-md-2 d-flex align-items-center justify-content-center">
+                    <div class="page-section page-section--double-spacing">
+                        <div class="container">
+                            <div class="max-text-width d-block">
+                                <h2 style="text-align: center;" class="font-mc-seven">JUGAR CON AMIGOS</h2>
+                                <p>LEVERAGE es un servidor gestionado por nosotros solo para ti y tus amigos. Nuestro mundo de Minecraft siempre estará disponible para tí, incluso cuando no estés conectado.</p>
+                                <p>¡Es, además, un poco inseguro! Mucha gente están unidos a tu mundo y lo que allí hagán puede afectarte. ¡crear, sobrevivir y competir!</p>
+                                <p>Tú y hasta 20 amigos, podéis jugar al mismo tiempo - y no hay límite de invitaciones.</p>
+                                <p>¡En el servidor puedes hacer lo que tú quieras! Crear máquinas enormes, castillos colosales o ciudades en el cielo, buscar recursos para sobrevivir durante la noche o cavar hasta lo más profundo para hacerte con valiosos tesoros para tus aventuras. Es tu mundo, tú mandas.</p>
+                                <p>Es tu mundo, aquí tú mandas.</p>
+                                <h2 style="text-align: center;"><a href="#downloads" class="font-mc-seven">DESCARGAR</a></h2>
+                                <div class="justify-content-center text-center max-text-width">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 image-bg" style="background-image: url({% static 'images/more/play-with-friends.jpg' %});"></div>
         </div>
-    {% endif %}
     </section>
-    <!-- Our BLog Section End -->
 
-    <!-- work-counter area -->
-    <section class="work-counter-section section-padding section-dark">
+    <section class="games-area section-padding-0-100" id="downloads">
         <div class="container">
             <div class="row">
-                <!-- Single Counter -->
-                <div class="col-md-4 col-sm-12 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".2s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-account-multiple-outline"></i></div>
-                        <div class="timer">{{ total_players }}</div>
-                        <p>Total de Jugadores</p>
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="text-center font-mc-ten mb-50">¿Donde descargarlo?</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Single About -->
+                <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".2s">
+                    <div class="about-single">
+                        <a target="_blank" href="{{ donwload_ftp }}"><img style="height: 70px" src="{% static 'images/ftp.png' %}"></a>
+                        <a target="_blank" href="{{ donwload_ftp }}"><h2 class="font-mc-seven">Minecraft Oficial</h2></a>
                     </div>
                 </div>
-                <!-- Single Counter -->
-                <div class="col-md-4 col-sm-12 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".3s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-account-card-details"></i></div>
-                        <div class="timer">{{ total_teams }}</div>
-                        <p>Total de Grupos</p>
+                <!-- Single About -->
+                <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
+                    <div class="about-single">
+                        <a target="_blank" href="{{ donwload_torrent }}"><img style="height: 70px" src="{% static 'images/torrent.png' %}"></a>
+                        <a target="_blank" href="{{ donwload_torrent }}"><h2 class="font-mc-seven">Minecraft Oficial</h2></a>
                     </div>
                 </div>
-                <!-- Single Counter -->
-                <div class="col-md-4 col-sm-12 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".4s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-account-check"></i></div>
-                        <div class="timer">{{ total_online }}</div>
-                        <p>Conectados</p>
+                <!-- Single About -->
+                <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".4s">
+                    <div class="about-single">
+                        <a target="_blank" href="{{ donwload_testing }}"><img style="height: 70px" src="{% static 'images/ftp.png' %}"></a>
+                        <a target="_blank" href="{{ donwload_testing }}"><h2 class="font-mc-seven">Testing</h2></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- work-counter area end -->
-
-    <!-- Services Section -->
-    <section class="Material-service-section section-padding">
-      <div class="container">
-          <div class="row">
-            <!-- Section Titile -->
-            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-              <h1 class="section-title text-center">¿Donde descargarlo?</h1>
-            </div>
-          </div>
-          <!-- Services Widget Section -->
-          <div class="row">
-              <!-- Service Widgets -->
-              <div class="col-md-12 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".3s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-download"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a target="_blank" href="{{ donwload_ftp }}">LEVERAGE (FTP)</a></h2>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-12 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".4s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-download"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a target="_blank" href="{{ donwload_torrent }}">LEVERAGE (Torrent)</a></h2>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-12 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".4s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-download"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a target="_blank" href="{{ donwload_testing }}">LEVERAGE Testing (FTP)</a></h2>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </section>
-    <!-- Services Section End -->
-
 {% endblock %}

@@ -51,7 +51,23 @@ def removeWhitelistFile(username):
             with open(os.path.join(SERVER_DIRS, 'whitelist.json'), 'w') as file:
                 json.dump(data, file)
             break
-    return {'error': "Ya usted estaba en la Lista Blanca"}
+    return {'error': "Usted no estaba en la Lista Blanca"}
+
+
+def isWhitelistFile(username):
+    data = []
+    # Lectura
+    try:
+        with open(os.path.join(SERVER_DIRS, 'whitelist.json')) as file:
+            data = json.load(file)
+    except Exception:
+        pass
+
+    # Buscar si el usuario existe
+    for obj in data:
+        if obj.get('name') == username:
+            return True
+    return False
 
 
 def refreshWhitelistFile():

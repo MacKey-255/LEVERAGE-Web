@@ -1,134 +1,116 @@
 {% load static %}
-    <!-- Header Start -->
-    <header id="header">
-      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar nav-bg">
-        <div class="container">
-         <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="mdi mdi-menu"></span>
-              <span class="mdi mdi-menu"></span>
-              <span class="mdi mdi-menu"></span>
-            </button>
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo_nuevo.png' %}" alt=""></a>
-          </div>
-          <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">
-                  Inicio
-                </a>
-              </li>
-                {% if user.is_staff %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'panel_admin' %}">
-                  Panel Admin
-                </a>
-              </li>
-                {% endif %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'news' %}">
-                  Noticias
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'webStatic' 'staff' %}">
-                  Staff
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'bans_list' %}">
-                  Baneados
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Informacion
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="{% url 'home' %}">¿Como descargar LEVERAGE?</a>
-                  <a class="dropdown-item" href="{% url 'home' %}">¿Como entrar al Servidor?</a>
-                  <a class="dropdown-item" href="{% url 'home' %}">¿Que mods posee el Servidor?</a>
-                  <a class="dropdown-item" href="{% url 'home' %}">¿Como sobrevivir tu primer dia?</a>
-                  <a class="dropdown-item" href="{% url 'home' %}">¿Como asegurar tu casa?</a>
-                  <a class="dropdown-item" href="{% url 'home' %}">¿Como asaltar una casa?</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'issues' %}">
-                  Reportes
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'donations' %}">
-                  Donaciones
-                </a>
-              </li>
-            </ul>
-            <!-- Search Box Start -->
-            <div class="search-icon">
-              <span class="open-search">
-	            {% if user.is_authenticated %}
-                    <a href="{% url 'profile' user.id %}"><img src="{% static 'images/user.png' %}" class="img-account btn btn-common"></a>
-                {% else %}
-                  <a href="{% url 'login' %}"><i class="mdi mdi-account btn btn-common"></i></a>
-                {% endif %}
-              </span>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+
+					<!--start: Connect -->
+					<div class="span3" id="server_ping">
+						<table id="server_ping" style="color:#fff;">
+							<tbody>
+                                <tr>
+                                    <td class="leverage"><b>LEVERAGE</b></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Estado:</td>
+                                    <td id="status">Cargando ...</td>
+                                </tr>
+                                <tr>
+                                    <td>Conectados:</td>
+                                    <td id="connect"><a href="{% url 'online' %}">0/0</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Version:</td>
+                                    <td id="version">Cargando ...</td>
+                                </tr>
+						    </tbody>
+                        </table>
+					</div>
+					<!--end: Connect -->
+
+					<!--start: Logo -->
+					<div class="logo">
+						<a class="brand" href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"></a>
+					</div>
+					<!--end: Logo -->
+
+                    </div>
+				</div>
             </div>
-            <!-- Search Box End -->
-          </div>
         </div>
-        <!-- Mobile Menu Start -->
-        <ul class="wpb-mobile-menu">
-          <li>
-            <a href="{% url 'home' %}">Inicio</a>
-          </li>
-            {% if user.is_staff %}
-          <li>
-            <a href="{% url 'panel_admin' %}">Panel Admin</a>
-          </li>
-            {% endif %}
-          <li>
-            <a href="{% url 'news' %}">Noticias</a>
-          </li>
-          <li>
-            <a href="{% url 'webStatic' 'staff' %}">Staff</a>
-          </li>
-          <li>
-            <a href="{% url 'bans_list' %}">Baneados</a>
-          </li>
-          <li>
-            <a href="#">Informacion</a>
-            <ul class="dropdown">
-              <li>
-                <a href="{% url 'home' %}">¿Como descargar LEVERAGE?</a>
-              </li>
-              <li>
-                <a href="{% url 'home' %}">¿Como entrar al Servidor?</a>
-              </li>
-              <li>
-                <a href="{% url 'home' %}">¿Que mods posee el Servidor?</a>
-              </li>
-              <li>
-                <a href="{% url 'home' %}">¿Como sobrevivir tu primer dia?</a>
-              </li>
-              <li>
-                  <a href="{% url 'home' %}">¿Como asegurar tu casa?</a>
-              </li>
-              <li>
-                  <a href="{% url 'home' %}">¿Como asaltar una casa?</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="{% url 'issues' %}">Reportes</a>
-          </li>
-          <li>
-            <a href="{% url 'donations' %}">Donaciones</a>
-          </li>
-        </ul>
-        <!-- Mobile Menu End -->
-      </nav>
+
+        <!-- Navbar Area -->
+        <div class="egames-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="egamesNav">
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                                    {% if user.is_staff %}
+                                    <li><a href="{% url 'panel_admin' %}">Panel Admin</a></li>
+                                    {% endif %}
+                                    <li><a href="{% url 'news' %}">Noticias</a></li>
+                                    <li><a href="{% url 'webStatic' 'staff' %}">Staff</a></li>
+                                    <li><a href="{% url 'bans_list' %}">Baneados</a></li>
+                                    <li><a href="#">Informacion</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index">¿Como descargar LEVERAGE?</a></li>
+                                            <li><a href="post">¿Como entrar al Servidor?</a></li>
+                                            <li><a href="single">¿Que mods posee el Servidor?</a></li>
+                                            <li><a href="game">¿Como sobrevivir tu primer dia?</a></li>
+                                            <li><a href="single">¿Como asegurar tu casa?</a></li>
+                                            <li><a href="contact">¿Como asaltar una casa?</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                        <div class="search-login-area d-flex align-items-center">
+                            <!-- Top Search Area -->
+                        {% if user.is_authenticated %}
+                            <div class="content-account">
+                                <div class="nick-account">
+                                    <a href="{% url 'profile' user.id %}">{{ user.username }}</a>
+                                </div>
+                                <div class="icon-account">
+                                    <a href="{% url 'restore' %}"><i class="fa fa-refresh"></i></a>
+                                    <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i></a>
+                                </div>
+                            </div>
+                            <a href="{% url 'profile' user.id %}"><img src="{% static 'images/user.png' %}" class="img-account btn btn-common"></a>
+                        {% else %}
+                            <!-- Login Area -->
+                            <div class="login-area">
+                                <a href="{% url 'login' %}"><span>Autenticacion</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </div>
+                        {% endif %}
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
-    <!-- Header End -->
+    <!-- ##### Header Area End ##### -->

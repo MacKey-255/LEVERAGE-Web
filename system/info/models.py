@@ -53,7 +53,6 @@ class Donations(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner', verbose_name='Donante')
     targetNauta = models.CharField(max_length=30, null=False, default='', verbose_name='Tarjeta Nauta')
     creationDate = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de la Donacion')
-    accepted = models.BooleanField(default=False, null=False, verbose_name='Donacion Aceptada')
 
     class Meta:
         verbose_name = 'Donacion'

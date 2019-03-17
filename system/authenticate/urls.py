@@ -11,7 +11,7 @@ urlpatterns = [
     path('register/', register, name="register"),
     path('restore/', restore, name="restore"),
     path('skins/', skins, name="upload_skins"),
-    path('change_ip/', change_ip, name="ip_config"),
+    path('change_ip/<int:id>', change_ip, name="ip_config"),
     # Ver Informacion & Online
     path('profile/<int:id>/', profile, name="profile"),
     path('online/', online, name="online"),

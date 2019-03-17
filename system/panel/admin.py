@@ -18,12 +18,7 @@ class AntiCheatAdmin(admin.ModelAdmin):
     list_display = ('version',)
 
 
-class LogAdmin(admin.ModelAdmin):
-    pass
-
-
 admin.site.register(Version, VersionAdmin)
 admin.site.register(Mods, ModsAdmin)
 admin.site.register(ResourcePack, ResourcePackAdmin)
 admin.site.register(AntiCheat, AntiCheatAdmin)
-admin.site.register(Log, LogAdmin)

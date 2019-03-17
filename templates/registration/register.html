@@ -1,13 +1,43 @@
-{% extends 'base/base.html' %}
-{% block nav %}{% include 'base/navbar.html' %}{% endblock %}
-{% block footer %}{% include 'base/footer.html' %}{% endblock %}
+{% extends 'base/template.html' %}
 {% load static %}
 {% block content %}
-    <br /><br /><br /><br />
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-  </form>
+    <!-- ##### Articles Area Start ##### -->
+    <section class="articles-area">
+        <div class="container">
+            <div class="row pt-5">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="text-center font-mc-ten mb-15">Registro de Usuario:</h1>
+                </div>
+            </div>
+            <nav class="row col-6 offset-3 justify-content-center">
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                        <form method="post">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="col-12">
+                                    {{ form.username.errors }}
+                                    <input name="{{ form.username.html_name }}" class="form-control" id="{{ form.username.html_name }}" placeholder="{{ form.username.label }}">
+                                </div>
+                                <div class="col-12">
+                                    {{ form.password1.errors }}
+                                    <input name="{{ form.password1.html_name }}" class="form-control" id="{{ form.password1.html_name }}" type="password" placeholder="{{ form.password1.label }}">
+                                </div>
+                                <div class="col-12">
+                                    {{ form.password2.errors }}
+                                    <input name="{{ form.password2.html_name }}" class="form-control" id="{{ form.password2.html_name }}" type="password" placeholder="{{ form.password2.label }}">
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Registrarse</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Articles Area End ##### -->
 {% endblock %}

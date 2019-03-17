@@ -1,7 +1,96 @@
-{{ useraname }}
+{% extends 'base/template.html' %}
+{% load static %}
+{% block content %}
 
-  <form method="post" enctype="multipart/form-data" action="{% url 'upload_skins' %}">
-    {% csrf_token %}
-    {{ skins.as_p }}
-    <button type="submit">Send</button>
-  </form>
+    <!-- Welcome Section Start -->
+    <section class="welcome-section section-padding section-dark">
+      <div class="container">
+        <div class="row pt-5">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="text-center font-mc-ten mb-50">Perfil de {{ usuario.owner.username }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% if user.is_staff or user.username == usuario.owner.username %}
+            <div class="col-md-6">
+            {% else %}
+            <div class="col-md-12">
+            {% endif %}
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>IP:</td>
+                            <td id="ip">{{ usuario.ip }}</td>
+                        </tr>
+                        <tr>
+                            <td>Permisos:</td>
+                            <td>{{ role }}</td>
+                        </tr>
+                        <tr>
+                            <td>Grupo:</td>
+                            <td>{{ team }}</td>
+                        </tr>
+                        <tr>
+                            <td>Estado AntiParche:</td>
+                            <td>{% if usuario.online %}Conectado al AntiCheat{% else %}Desconectado del AntiCheat{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <td>Estado Servidor:</td>
+                            <td>{% if online %}Conectado al Servidor{% else %}Desconectado del Servidor{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <td>Lista Blanca:</td>
+                            <td>{% if whitelist %}Enlazado a la Lista Blanca{% else %}Fuera de la Lista Blanca{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <td>Ultima Conexion:</td>
+                            <td>Hace {{ usuario.timeActivity | timesince }}</td>
+                        </tr>
+                        <tr>
+                            <td>Premium:</td>
+                            <td>{% if premium %}Usuario Premium{{% else %}Usuario Ordinario{% endif %}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% if user.is_staff or user.username == usuario.owner.username %}
+            <div class="col-md-6">
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <div class="row">
+                        <!-- Section Titile -->
+                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                            <h1 class="text-center font-mc-ten mb-2">Subir Skins:</h1>
+                        </div>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                         <form method="post" enctype="multipart/form-data" action="{% url 'upload_skins' %}">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="col-12 mb-1">
+                                    {{ skins.upload.errors }}
+                                    {{ skins.upload }}
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Subir Skins</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <!-- Section Titile -->
+                    <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                        <h1 class="text-center font-mc-ten mb-2">Cambio de IP:</h1>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="{% url 'ip_config' usuario.id %}"><button class="btn egames-btn w-100">Actualizar IP</button></a>
+                </div>
+            </div>
+            {% endif %}
+          </div>
+      </div>
+    </section>
+{% endblock %}

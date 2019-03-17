@@ -1,11 +1,49 @@
-{% if online %}
-    {% if players %}
-        {% for obj in players %}
-            <p>obj</p>
-        {% endfor %}
-    {% else %}
-        No hay Jugadores Conectados.
-    {% endif %}
-{% else %}
-    No hay Servidor en este instante.
-{% endif %}
+{% extends 'base/template.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Welcome Section Start -->
+    <section class="welcome-section section-padding section-dark">
+      <div class="container">
+        <div class="row pt-5">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="text-center font-mc-ten mb-50">Listado de Usuarios Conectados:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12">
+                <div class="Material-tab">
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="business" role="tabpanel">
+                    {% if online %}
+                        {% if players %}
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Usuario</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for user in players %}
+                            <tr>
+                              <td scope="row">{{ user }}</td>
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                        {% else %}
+                            <p class="text-center">No hay Jugadores Conectados.</p>
+                        {% endif %}
+                    {% else %}
+                        <p class="text-center">No hay Servidor en este instante.</p>
+                    {% endif %}
+                    </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

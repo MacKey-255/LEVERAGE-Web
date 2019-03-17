@@ -1,80 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Minecraft - LEVERAGE</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- Meterial Icon CSS -->
-    <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css' %}">
-    <!-- Material CSS -->
-    <link rel="stylesheet" href="{% static 'css/material.min.css' %}">
-    <!-- Ripples CSS -->
-    <link rel="stylesheet" href="{% static 'css/ripples.min.css' %}">
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-    <!-- Slicknav CSS -->
-    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <title>{{ title_page }}</title>
 
     {% block style %}{% endblock %}
 
     <!-- Color CSS Styles  -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/colors/indigo.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
 
   </head>
   <body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
     {% block nav %}{% endblock %}
     {% block slides %}{% endblock %}
     {% block content %}{% endblock %}
     {% block footer %}{% endblock %}
 
-
-
-    <!-- Back To Top -->
-    <a href="#" class="back-to-top">
-      <div class="ripple-container"></div>
-      <i class="mdi mdi-arrow-up">
-      </i>
-    </a>
-
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader" id="loader-1"></div>
-    </div>
-    <!-- End Preloader -->
-
-    <!-- Optional JavaScript -->
-    <script src="{% static 'js/jquery-min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-    <script src="{% static 'js/jquery.mixitup.min.js' %}"></script>
-    <script src="{% static 'js/jquery.inview.js' %}"></script>
-    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
-    <script src="{% static 'js/scroll-top.js' %}"></script>
-    <script src="{% static 'js/smoothscroll.js' %}"></script>
-    <script src="{% static 'js/material.min.js' %}"></script>
-    <script src="{% static 'js/ripples.min.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/wow.js' %}"></script>
-    <script src="{% static 'js/jquery.vide.js' %}"></script>
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/ajax.js' %}"></script>
+    <script type="text/javascript">
+        var online_url = "http://{{ request.get_host }}"+"{% url 'api_online' %}";
+    </script>
+    <script src="{% static 'js/active.js' %}"></script>
     {% block javascript %}{% endblock %}
   </body>
 </html>

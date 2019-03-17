@@ -3,8 +3,12 @@ import json
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 
+from mine import settings
+from system.lib.mcrcon import rconConnect
 from .forms import JsonForm
 from .models import Version, Mods, ResourcePack, Log
 
@@ -29,10 +33,6 @@ def home(request):
     resources_form.fields.get('type').initial = "resources"
 
     data = {
-        'resources': ResourcePack.objects.all(),
-        'mods': Mods.objects.all(),
-        'versions': Version.objects.all(),
-        'logs': Log.objects.all().order_by('-id')[:5],
         'staff': User.objects.filter(is_staff=True),
         'form_version': version_form,
         'form_mods': mods_form,
@@ -91,4 +91,44 @@ def change(request):
                         resource.save()
                     except Exception:
                         print(obj.get('id') + ' no es valido')
+    return redirect('panel_admin')
+
+
+@csrf_exempt
+def rcon_ajax(request):
+    if not request.user.is_staff:
+        return JsonResponse(data={
+            'error': True,
+            'response': "Usuario sin Privilegios"
+        }, safe=False)
+    # Tomar informacion por POST
+    command = request.POST['cmd']
+    try:
+        rcon = rconConnect()
+        rcon.command(command)
+        data = {
+            'error': False,
+            'response': "OK"
+        }
+    except Exception:
+        data = {
+            'error': True,
+            'response': "Servidor Cerrado o Comando invalido!"
+        }
+
+    return JsonResponse(data, safe=False)
+
+
+@csrf_exempt
+def rcon(request):
+    if not request.user.is_staff:
+        return redirect('login')
+    # Tomar informacion por POST
+    command = request.POST['cmd']
+    print(request.POST)
+    try:
+        rcon = rconConnect()
+        rcon.command(command)
+    except Exception:
+        pass
     return redirect('panel_admin')

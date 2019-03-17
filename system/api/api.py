@@ -211,7 +211,7 @@ def user_ban(request):
     # Ban Server User
     try:
         rcon = rconConnect()
-        rcon.command('ban ' + user.owner.username + ' Su AntiParches ha detectado un Parche')
+        rcon.command('ban-ip ' + user.ip + ' Su AntiParches ha detectado un Parche')
     except Exception:
         return HttpResponse("ERROR CONEXION CON EL SERVIDOR", content_type="text/plain", status=200)
 
@@ -253,7 +253,7 @@ def user_skins(request):
     data = request.body
 
     # Escribir Archivo de Foto
-    destination = open(os.path.join(MEDIA_ROOT, 'skins/' + user.owner.username + '.png'), 'wb')
+    destination = open(os.path.join(MEDIA_ROOT, 'skins/' + str(request.user.username).lower() + '.png'), 'wb')
     destination.write(data)
     destination.close()
 
@@ -281,6 +281,8 @@ def user_status(request, uuid):
             result = today.month - (you.premium.month + 1) + (0 if today.day < you.premium.day else 1)
             if result > 0:
                 data = "NEWS:" + settings.ANTICHEAT_NOTIFICATION
+        else:
+            data = "NEWS:" + settings.ANTICHEAT_NOTIFICATION
     return HttpResponse(data, content_type="text/plain", status=200)
 
 

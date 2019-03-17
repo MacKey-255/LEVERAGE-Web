@@ -1,47 +1,61 @@
 {% extends 'base/template.html' %}
 {% load static %}
 {% block content %}
-    <!-- Our BLog Section -->
-    <section class="Material-blog-section section-padding section-dark">
-      <div class="container">
-        <div class="row">
-            <!-- Section Titile -->
-            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                <h1 class="section-title text-center">Noticias:</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            {% if object_list %}
-                {% for obj in object_list %}
-                <!-- Single Article -->
-                <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
-                    <article class="single-blog-post">
-                        <!-- Featured Image -->
-                        <div class="featured-image">
-                            <a href="#">
-                                <img src="{{ obj.image.url }}" alt="">
-                            </a>
-                        </div>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <!-- Title -->
-                            <a href="#"><h2 class="subtitle">{{ obj.title }}</h2></a>
-                             <p>{{ obj.description }}</p>
-                        </div>
-                    </article>
+    <!-- ##### Articles Area Start ##### -->
+    <section class="articles-area section-padding-0-100">
+        <div class="container">
+            <div class="row pt-5">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="text-center font-mc-ten mb-15">Noticias:</h1>
                 </div>
-                {% endfor %}
-        {% else %}
-            <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".6s">
-              <!-- Button -->
-              <div class="col-md-12">
-                  <h6 class="text-center">No existen Noticias!</h6>
-              </div>
             </div>
-        {% endif %}
+            <nav class="row justify-content-center">
+                <!-- Articles Post Area -->
+                <div class="col-12 col-lg-12">
+                    <nav class="mt-100">
+                        <!-- *** Single Articles Area *** -->
+                    {% if object_list %}
+                        {% for obj in object_list %}
+                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                            <div class="article-thumbnail">
+                                <img src="{{ obj.image.url }}" alt="">
+                            </div>
+                            <div class="article-content">
+                                <a href="single-post.html" class="post-title">{{ obj.title }}</a>
+                                <div class="post-meta">
+                                    <a href="#" class="post-date"> hace {{ obj.creationDate | timesince }}</a>
+                                </div>
+                                <p>{{ obj.description }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="col-md-12 wow animated fadeInUp" data-wow-delay=".6s">
+                          <!-- Button -->
+                          <div class="col-md-12">
+                              <h6 class="text-center">No existen Noticias!</h6>
+                          </div>
+                        </div>
+                    {% endif %}
+                    </nav>
+                </div>
+                {% if is_paginated %}
+                    <!-- ### Pagination Area ### -->
+                    <nav aria-label="navigation col-lg-2 offset-5">
+                        <ul class="pagination mt-50">
+                            {% if page_obj.has_previous %}
+                                <li class="page-item"><a class="page-link" href="{{ request.path }}?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+                            {% endif %}
+                            <li class="page-item active"><a class="page-link" href="#">Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</a></li>
+                             {% if page_obj.has_next %}
+                            <li class="page-item"><a class="page-link" href="{{ request.path }}?page={{ page_obj.next_page_number }}">Siguiente</a></li>
+                             {% endif %}
+                         </ul>
+                     </nav>
+                {% endif %}
+            </div>
         </div>
-      </div>
     </section>
-    <!-- Our BLog Section End -->
+    <!-- ##### Articles Area End ##### -->
 {% endblock %}

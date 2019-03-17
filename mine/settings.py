@@ -129,16 +129,19 @@ USE_TZ = False
 # Nombre de la Web
 PAGE_NAME = "Minecraft - LEVERAGE"
 
+# Numero de Noticias en Cada Paginator
+MAX_PAGINATOR = 10
+
 # Cache Web
 CACHE_GLOBAL_SECONDS = 60 * 60 * 12    # 12 horas
 
 # Notificacion en el AntiParches
-ANTICHEAT_NOTIFICATION = 'Puede activar la cuenta Premium donando Tarjeta Nauta!'
+ANTICHEAT_NOTIFICATION = 'Puede evitar publicidad activado la cuenta Premium donando Tarjeta Nauta!'
 
 # Mode mantenimiento
 MANTENIMIENTO_DEBUG = False
-MANTENIMIENTO_DATE = 'June 10, 2020 23:00:00'
-MANTENIMIENTO_PORCIENTO = '90'
+MANTENIMIENTO_DATE = 'March 22, 2019 23:00:00'
+MANTENIMIENTO_PORCIENTO = '92'
 
 # Redirect Login & Logout
 LOGIN_REDIRECT_URL = 'home'
@@ -150,6 +153,7 @@ MC_PORT = 25565
 RCON_PORT = 25595
 RCON_PASSWORD = 'minecraft122'
 SERVER_DIRS = '/home/mackey/MacKey/Server/Minecraft/Server Minecraft LEVERAGE v3.2/'
+SERVER_BAT = '/home/mackey/MacKey/Server/Minecraft/Server Minecraft LEVERAGE v3.2/ServerStart.sh'
 
 #######################################
 #        Web CONFIGURATION END        #

@@ -3,6 +3,7 @@ from contextlib import redirect_stderr
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
+from mine import settings
 from system.authenticate.models import Ban
 from .models import News, TemplatesStatics, Issues, Donations
 from .forms import IssuesForm, DonationsForm
@@ -12,6 +13,7 @@ from .forms import IssuesForm, DonationsForm
 class news(ListView):
     model = News
     template_name = 'info/news.html'
+    paginate_by = settings.MAX_PAGINATOR
 
 
 class bans(ListView):

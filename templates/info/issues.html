@@ -1,13 +1,39 @@
-{% extends 'base/base.html' %}
-{% block nav %}{% include 'base/navbar.html' %}{% endblock %}
-{% block footer %}{% include 'base/footer.html' %}{% endblock %}
+{% extends 'base/template.html' %}
 {% load static %}
 {% block content %}
-    <br /><br /><br /><br />
-  <h2>Issues:</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Send</button>
-  </form>
+    <!-- ##### Articles Area Start ##### -->
+    <section class="articles-area section-padding-0-100">
+        <div class="container">
+            <div class="row pt-5">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="text-center font-mc-ten mb-15">Enviar un Reporte:</h1>
+                </div>
+            </div>
+            <nav class="row justify-content-center">
+                <div class="post-a-comment-area clearfix" id="reply">
+                    <!-- Reply Form -->
+                    <div class="contact-form-area">
+                        <form method="post">
+                            <div class="row">
+                                {% csrf_token %}
+                                <div class="col-12">
+                                    {{ form.title.errors }}
+                                    <input name="{{ form.title.html_name }}" class="form-control" id="{{ form.title.html_name }}" placeholder="{{ form.title.label }}">
+                                </div>
+                                <div class="col-12">
+                                    {{ form.content.errors }}
+                                    <textarea name="{{ form.content.html_name }}" class="form-control" id="{{ form.content.html_name }}" cols="30" rows="10" placeholder="{{ form.content.label }}"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn egames-btn w-100" type="submit">Enviar Reporte</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Articles Area End ##### -->
 {% endblock %}
