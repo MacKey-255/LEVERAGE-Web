@@ -5,6 +5,7 @@ import uuid
 import time
 from datetime import datetime
 from django.core.files.storage import FileSystemStorage
+from django.utils.functional import cached_property
 
 from mine import settings
 
@@ -63,6 +64,16 @@ class OverwriteFile(FileSystemStorage):
         if self.exists(name):
             os.remove(os.path.join(settings.MEDIA_ROOT, name))
         return name
+
+    @cached_property
+    def base_url(self):
+        if self._base_url is not None and not self._base_url.endswith('/'):
+            self._base_url += '/'
+        return self._value_or_setting(self._base_url, settings.SKINS_DIRS)
+
+    @cached_property
+    def base_location(self):
+        return self._value_or_setting(self._location, settings.SKINS_DIRS)
 
 
 def is_cheat(word):

@@ -76,8 +76,11 @@ def refreshWhitelistFile():
     yesterday = datetimeToTimestamp(yesterday)
     yesterday = yesterday - 3600*24  # a la hora le quitamos un dia (60*60*24)
     yesterday = timestampToDatetime(yesterday)
+    # Removemos toda la lista
+    with open(os.path.join(SERVER_DIRS, 'whitelist.json'), 'w') as file:
+        json.dump([], file)
     # Buscamos por la fecha de ayer
-    users = Profile.objects.filter(timeActivity__lte=yesterday)
-    # Remover de la lista blanca a los usuarios encontrados
+    users = Profile.objects.filter(timeActivity__gte=yesterday, online=True)
+    # Añadimos a la lista blanca a los usuarios encontrados
     for user in users:
-        removeWhitelistFile(user.owner.username)
+        addWhitelistFile(user.owner.username)

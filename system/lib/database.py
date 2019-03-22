@@ -17,9 +17,9 @@ DATABASES_CONFIG = {
     'mysql': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'minecraft',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'USER': 'mackey',
+        'PASSWORD': 'redes',
+        'HOST': '10.30.1.31',
         'PORT': '3306',
     },
     'mongodb' : {

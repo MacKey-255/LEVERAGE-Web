@@ -130,7 +130,7 @@ def skins(request):
         form = SkinsForm(request.POST, request.FILES)
         if form.is_valid():
             fs = OverwriteFile()
-            fs.save('skins/' + str(request.user.username).lower() + '.png', request.FILES['upload'])
+            fs.save(request.user.username + '.png', request.FILES['upload'])
             response = {'error': False, 'response': "OK"}
         else:
             response = {'error': True, 'response': form.errors}

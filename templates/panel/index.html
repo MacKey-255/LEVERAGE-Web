@@ -64,7 +64,7 @@
                                 {% csrf_token %}
                                 <div class="col-12 mb-1">
                                     {{ form_version.json.errors }}
-                                    <input name="{{ form_version.json.html_name }}" class="form-control" id="{{ form_version.json.html_name }}" type="number" placeholder="{{ form_version.json.label }}">
+                                    <input name="{{ form_version.json.html_name }}" class="form-control" id="{{ form_version.json.html_name }}" type="text" placeholder="{{ form_version.json.label }}">
                                     {{ form_version.type }}
                                 </div>
                                 <div class="col-12">
@@ -88,7 +88,7 @@
                                 {% csrf_token %}
                                 <div class="col-12 mb-1">
                                     {{ form_mods.json.errors }}
-                                    <input name="{{ form_mods.json.html_name }}" class="form-control" id="{{ form_mods.json.html_name }}" type="number" placeholder="{{ form_mods.json.label }}">
+                                    <input name="{{ form_mods.json.html_name }}" class="form-control" id="{{ form_mods.json.html_name }}" type="text" placeholder="{{ form_mods.json.label }}">
                                     {{ form_mods.type }}
                                 </div>
                                 <div class="col-12">
@@ -112,7 +112,7 @@
                                 {% csrf_token %}
                                 <div class="col-12 mb-1">
                                     {{ form_resources.json.errors }}
-                                    <input name="{{ form_resources.json.html_name }}" class="form-control" id="{{ form_resources.json.html_name }}" type="number" placeholder="{{ form_resources.json.label }}">
+                                    <input name="{{ form_resources.json.html_name }}" class="form-control" id="{{ form_resources.json.html_name }}" type="text" placeholder="{{ form_resources.json.label }}">
                                     {{ form_resources.type }}
                                 </div>
                                 <div class="col-12">

@@ -3,7 +3,7 @@
 {% block content %}
     <!-- ##### Articles Area Start ##### -->
     <section class="articles-area section-padding-0-100">
-        <div class="container">
+        <nav class="container">
             <div class="row pt-5">
                 <!-- Section Titile -->
                 <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
@@ -17,12 +17,12 @@
                         <!-- *** Single Articles Area *** -->
                     {% if object_list %}
                         {% for obj in object_list %}
-                        <div class="single-articles-area d-flex flex-wrap mb-30">
+                        <div id="{{ obj.id }}" class="single-articles-area d-flex flex-wrap mb-30">
                             <div class="article-thumbnail">
                                 <img src="{{ obj.image.url }}" alt="">
                             </div>
                             <div class="article-content">
-                                <a href="single-post.html" class="post-title">{{ obj.title }}</a>
+                                <a href="#" class="post-title">{{ obj.title }}</a>
                                 <div class="post-meta">
                                     <a href="#" class="post-date"> hace {{ obj.creationDate | timesince }}</a>
                                 </div>
@@ -54,8 +54,8 @@
                          </ul>
                      </nav>
                 {% endif %}
-            </div>
-        </div>
+            </nav>
+        </nav>
     </section>
     <!-- ##### Articles Area End ##### -->
 {% endblock %}

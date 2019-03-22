@@ -16,7 +16,6 @@ from system.lib.database import DATABASES_CONFIG
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -29,12 +28,11 @@ TEMPLATES_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard', # always before django.contrib.admin
-    'jet',           # always before django.contrib.admin
+    'jet.dashboard',  # always before django.contrib.admin
+    'jet',  # always before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,7 +78,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mine.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -133,7 +130,7 @@ PAGE_NAME = "Minecraft - LEVERAGE"
 MAX_PAGINATOR = 10
 
 # Cache Web
-CACHE_GLOBAL_SECONDS = 60 * 60 * 12    # 12 horas
+CACHE_GLOBAL_SECONDS = 60 * 60 * 12  # 12 horas
 
 # Notificacion en el AntiParches
 ANTICHEAT_NOTIFICATION = 'Puede evitar publicidad activado la cuenta Premium donando Tarjeta Nauta!'
@@ -141,19 +138,19 @@ ANTICHEAT_NOTIFICATION = 'Puede evitar publicidad activado la cuenta Premium don
 # Mode mantenimiento
 MANTENIMIENTO_DEBUG = False
 MANTENIMIENTO_DATE = 'March 22, 2019 23:00:00'
-MANTENIMIENTO_PORCIENTO = '92'
+MANTENIMIENTO_PORCIENTO = '99'
 
 # Redirect Login & Logout
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Server Settings
-MC_HOST = '127.0.0.1'
+MC_HOST = '10.30.1.31'
 MC_PORT = 25565
 RCON_PORT = 25595
 RCON_PASSWORD = 'minecraft122'
-SERVER_DIRS = '/home/mackey/MacKey/Server/Minecraft/Server Minecraft LEVERAGE v3.2/'
-SERVER_BAT = '/home/mackey/MacKey/Server/Minecraft/Server Minecraft LEVERAGE v3.2/ServerStart.sh'
+SERVER_DIRS = 'D:\Minecraft\Server_2768\LEVERAGE_v3.1'
+SKINS_DIRS = '/home/mackey/PycharmProjects'
 
 #######################################
 #        Web CONFIGURATION END        #

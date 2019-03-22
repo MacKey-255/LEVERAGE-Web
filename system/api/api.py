@@ -1,7 +1,7 @@
 import json
 import os
 
-from mine.settings import MEDIA_ROOT
+from mine.settings import MEDIA_ROOT, SKINS_DIRS
 from system.panel.models import ResourcePack, Mods, Version
 from system.lib.mcrcon import rconConnect
 from system.lib.server import addWhitelistFile, removeWhitelistFile, refreshWhitelistFile
@@ -41,7 +41,6 @@ def logout_anticheat(request):
         # Add file whitelist
         try:
             removeWhitelistFile(user.owner.username)
-            refreshWhitelistFile()
         except Exception:
             return HttpResponse("ERROR CON EL SERVIDOR DE MINECRAFT", content_type="text/plain", status=200)
 
@@ -95,6 +94,7 @@ def auth_anticheat(request):
                     }
                 ]
             }
+            refreshWhitelistFile()
             return JsonResponse(data, safe=False)
         else:
             return JsonResponse({'error': "Contraseña Incorrecta!"}, safe=False)
@@ -155,7 +155,6 @@ def user_black(request):
 
     # Add file whitelist
     removeWhitelistFile(user.owner.username)
-    refreshWhitelistFile()
     # Reload Whitelist
     try:
         rcon = rconConnect()
@@ -180,6 +179,7 @@ def user_white(request):
     # Add file whitelist
     try:
         addWhitelistFile(user.owner.username)
+        refreshWhitelistFile()
     except Exception:
         return HttpResponse("ERROR CON EL SERVIDOR DE MINECRAFT", content_type="text/plain", status=200)
 
@@ -253,7 +253,7 @@ def user_skins(request):
     data = request.body
 
     # Escribir Archivo de Foto
-    destination = open(os.path.join(MEDIA_ROOT, 'skins/' + str(request.user.username).lower() + '.png'), 'wb')
+    destination = open(os.path.join(SKINS_DIRS, request.user.username + '.png'), 'wb')
     destination.write(data)
     destination.close()
 

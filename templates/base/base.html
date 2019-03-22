@@ -13,7 +13,7 @@
     {% block style %}{% endblock %}
 
     <!-- Color CSS Styles  -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
 
   </head>
@@ -39,13 +39,13 @@
     <!-- Bootstrap js -->
     <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- All Plugins js -->
-    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <script src="{% static 'js/plugins/plugins.min.js' %}"></script>
     <!-- Active js -->
-    <script src="{% static 'js/ajax.js' %}"></script>
+    <script src="{% static 'js/ajax.min.js' %}"></script>
     <script type="text/javascript">
         var online_url = "http://{{ request.get_host }}"+"{% url 'api_online' %}";
     </script>
-    <script src="{% static 'js/active.js' %}"></script>
+    <script src="{% static 'js/active.min.js' %}"></script>
     {% block javascript %}{% endblock %}
   </body>
 </html>

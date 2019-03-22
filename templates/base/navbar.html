@@ -75,12 +75,11 @@
                                     <li><a href="{% url 'bans_list' %}">Baneados</a></li>
                                     <li><a href="#">Informacion</a>
                                         <ul class="dropdown">
-                                            <li><a href="index">¿Como descargar LEVERAGE?</a></li>
-                                            <li><a href="post">¿Como entrar al Servidor?</a></li>
-                                            <li><a href="single">¿Que mods posee el Servidor?</a></li>
-                                            <li><a href="game">¿Como sobrevivir tu primer dia?</a></li>
-                                            <li><a href="single">¿Como asegurar tu casa?</a></li>
-                                            <li><a href="contact">¿Como asaltar una casa?</a></li>
+                                            <li><a href="{% url 'webStatic' 'download' %}">¿Como descargar LEVERAGE?</a></li>
+                                            <li><a href="{% url 'webStatic' 'join' %}">¿Como entrar al Servidor?</a></li>
+                                            <li><a href="{% url 'webStatic' 'survival' %}">¿Como sobrevivir tu primer dia?</a></li>
+                                            <li><a href="{% url 'webStatic' 'secure' %}">¿Como asegurar tu casa?</a></li>
+                                            <li><a href="{% url 'webStatic' 'attack' %}">¿Como asaltar una casa?</a></li>
                                         </ul>
                                     </li>
                                 </ul>

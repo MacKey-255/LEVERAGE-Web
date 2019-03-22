@@ -9,7 +9,7 @@ class Profile(models.Model):
     owner = models.OneToOneField(User, unique=True, on_delete=models.CASCADE, verbose_name='Usuario')
     role = models.ForeignKey(Group, on_delete=models.CASCADE, blank=True, null=True, verbose_name="Role")
     date = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de Creacion')
-    group = models.OneToOneField('Team', related_name="user_group", on_delete=models.CASCADE, null=True, blank=True, verbose_name="Grupo Subscrito")
+    group = models.ForeignKey('Team', related_name="user_group", on_delete=models.CASCADE, null=True, blank=True, verbose_name="Grupo Subscrito")
     timeActivity = models.DateTimeField(auto_now=True, verbose_name="Ultima Actividad")
     ip = models.GenericIPAddressField(null=False, verbose_name="IP")
     uuid = models.CharField(max_length=50, null=False, verbose_name="UUID")

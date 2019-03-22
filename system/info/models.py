@@ -10,7 +10,7 @@ class News(models.Model):
     description = models.CharField(max_length=200, null=False, default='', validators=[validate], verbose_name='Descripcion')
     image = models.ImageField(upload_to='news', null=False, verbose_name='Imagen Representativa')
     wroteBy = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_wroteBy', verbose_name='Escritor')
-    creationDate = models.DateField(null=False, auto_now_add=True, verbose_name='Fecha de Creacion')
+    creationDate = models.DateTimeField(null=False, auto_now_add=True, verbose_name='Fecha de Creacion')
     show_anticheat = models.BooleanField(null=False, default=False, verbose_name='Mostrar en el AntiParche')
 
     class Meta:
