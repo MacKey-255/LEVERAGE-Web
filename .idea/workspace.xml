@@ -2,67 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="996d6ab3-e07c-4fd3-9067-b2c4c6854f81" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/classy-nav.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/magnific-popup.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/nice-select.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/active.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/ajax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/plugins/plugins.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mine/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mine/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mine/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/classy-nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/classy-nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/nice-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/nice-select.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/owl.carousel.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/active.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/active.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/bootstrap/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/bootstrap/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery/jquery-2.2.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery/jquery-2.2.4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/plugins/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/plugins/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/resources/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/resources/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/resources/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/resources/js/plusone.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/resources/js/plusone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/api/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/api/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/authenticate/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/authenticate/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/authenticate/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/authenticate/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/authenticate/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/context_processors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/info/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/info/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/info/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/info/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/lib/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/lib/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/lib/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/lib/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/panel/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/panel/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/panel/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/panel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/panel/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/system/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/slides.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/slides.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/info/donation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info/donation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/info/issues.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info/issues.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/info/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mantenimiento/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mantenimiento/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/online.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/online.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/restore.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/restore.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +17,7 @@
     <session id="416287333">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.109" value="1" />
@@ -85,7 +25,7 @@
           <entry key="project.open.time.158" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="2" />
-          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.59" value="1" />
@@ -96,7 +36,7 @@
           <entry key="project.open.time.90" value="1" />
           <entry key="project.open.time.93" value="1" />
           <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -184,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/system/context_processors.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -311,7 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,6 +267,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,14 +380,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1040" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1682641" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16986156" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286026" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31222707" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31222707" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -654,13 +593,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/lib/mcrcon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base/footer.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -747,9 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="149" column="17" lean-forward="true" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
-          <folding>
-            <element signature="e#308#317#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,9 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,9 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="126" column="34" lean-forward="true" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,7 +770,7 @@
     <entry file="file://$PROJECT_DIR$/system/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
         </state>
       </provider>
     </entry>

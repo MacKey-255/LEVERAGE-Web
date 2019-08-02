@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#=a6wgclrekc_%cp$ausv4e)@%+yzl(g_&f6*t0qkl1d80md#3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 TEMPLATES_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['*']
@@ -137,7 +137,7 @@ ANTICHEAT_NOTIFICATION = 'Puede evitar publicidad activado la cuenta Premium don
 
 # Mode mantenimiento
 MANTENIMIENTO_DEBUG = False
-MANTENIMIENTO_DATE = 'March 22, 2019 23:00:00'
+MANTENIMIENTO_DATE = 'March 22, 2019 12:00:00'
 MANTENIMIENTO_PORCIENTO = '99'
 
 # Redirect Login & Logout
@@ -149,8 +149,8 @@ MC_HOST = '10.30.1.31'
 MC_PORT = 25565
 RCON_PORT = 25595
 RCON_PASSWORD = 'minecraft122'
-SERVER_DIRS = 'D:\Minecraft\Server_2768\LEVERAGE_v3.1'
-SKINS_DIRS = '/home/mackey/PycharmProjects'
+SERVER_DIRS = 'D:\Minecraft\Server_2768\LEVERAGE_v3.4'
+SKINS_DIRS = 'C:\web\htdocs'
 
 #######################################
 #        Web CONFIGURATION END        #

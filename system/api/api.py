@@ -159,6 +159,7 @@ def user_black(request):
     try:
         rcon = rconConnect()
         rcon.command('whitelist reload')
+        rcon.command('say El Usuario '+ str(user.owner.username) + ' se ha salido de la lista blanca!')
     except Exception:
         return HttpResponse("ERROR CONEXION CON EL SERVIDOR", content_type="text/plain", status=200)
 
@@ -187,6 +188,7 @@ def user_white(request):
     try:
         rcon = rconConnect()
         rcon.command('whitelist reload')
+        rcon.command('say El Usuario '+ str(user.owner.username) + ' se ha añadido a la lista blanca!')
     except Exception:
         return HttpResponse("ERROR DE CONEXION CON EL SERVIDOR", content_type="text/plain", status=200)
 
